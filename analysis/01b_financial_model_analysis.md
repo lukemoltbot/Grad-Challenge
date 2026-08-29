@@ -55,7 +55,7 @@ The Brave Blossom Capital tab has been populated with the 12 capital items and y
 | 2033 | 24,000 | 7,200 | 31,200 |
 | **Total** | **518,400** | **155,520** | **673,920** |
 
-- **Without contingency:** $518.4M (vs vault estimate of $388.9M — difference due to unit-cost framework using higher per-unit costs)
+- **Without contingency:** $518.4M (vs vault estimate of $388.9M — unit costs sum to $387.9M; the $130.5M difference arises from fractional unit counts where partial-year items use 0.5 units, inflating total cost above the single-unit sum)
 - **With 30% contingency:** $673.9M
 - **Peak capital year:** 2032 ($288M including contingency) — driven by $190M longwall purchase
 - **Front-loaded studies:** $26M in 2027–2028 for PFS, drilling, concept study
@@ -67,7 +67,7 @@ The vault's $388.9M concept estimate (vault file 07) represents the direct capit
 2. The vault's year-by-year dollar amounts don't perfectly map to integer/fractional unit counts × unit costs
 3. The workbook's contingency rate is 30% vs the vault's implicit 0% (contingency listed as "missing from estimate")
 
-**Recommendation:** The $388.9M direct capital figure should be used for board reporting. The $518.4M workbook figure includes rounding effects from the unit-count methodology. The $673.9M (with 30% contingency) represents the full risked capital estimate.
+**Recommendation:** The $388.9M concept estimate (vault file 07) and the workbook's unit-cost sum of $387.9M are closely aligned (within $1M). The $518.4M workbook schedule total is higher because fractional unit counts (e.g., 0.5 units for partial-year phasing) inflate costs above the single-unit baseline. The $673.9M (with 30% contingency) represents the full risked capital estimate. For board reporting, use the $388.9M direct figure with $673.9M as the risked upper bound.
 
 ---
 

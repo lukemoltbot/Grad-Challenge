@@ -472,7 +472,7 @@ Per vault context: Combined NPV = $1,670M. This would be Springbok ($279M) + Bra
 
 1. **Brave Blossom Capital is empty of scheduling data (Sheet 10):** The framework exists (882 cells, formulas, year headers, unit costs in column C) but ALL year-by-year unit count cells (D4:N25) are blank/zero. This produces $0 total capital, which flows through to the Brave Blossom DCF as $0 capital expenditure, $0 depreciation, and an inflated NPV of $1,320M. **This is the primary task for the graduate challenge — populating this sheet.**
 
-2. **Brave Blossom Capital has no item names (Sheet 10, column A):** Unlike SpringbokCapital (which names 8 items: Replacement Miner, Ventilation Shaft, etc.) and OC Clean Capital (26 named items), Brave Blossom Capital's column A is entirely blank for rows 4–15. The unit costs are present (5,000 to 190,000 AUD$k) but without item descriptions, it's unclear what equipment/infrastructure each line represents. The total of unit costs is 588,900 AUD$k (~$589M), which is higher than the vault's $389M capital estimate — suggesting not all items may be needed, or costs may be per-unit rather than total.
+2. **Brave Blossom Capital has no item names (Sheet 10, column A):** Unlike SpringbokCapital (which names 8 items: Replacement Miner, Ventilation Shaft, etc.) and OC Clean Capital (26 named items), Brave Blossom Capital's column A is entirely blank for rows 4–15. The unit costs are present (5,000 to 190,000 AUD$k) and sum to $387.9M — closely matching the vault's $388.9M capital estimate. When fractional unit counts are applied (e.g., 0.5 units for partial-year items), the total capital schedule rises to $518.4M.
 
 3. **OC Clean Capital may also lack scheduling data (Sheet 13):** While item names and unit costs are present (26 items), the year-by-year unit count cells appear mostly blank, producing zeros. This may be intentional (OC Clean is a proposal-stage model) or may also need population.
 
@@ -515,7 +515,7 @@ Per vault context: Combined NPV = $1,670M. This would be Springbok ($279M) + Bra
 | Brave Blossom NPV $1,320M base case | C126 = 1,320,078 AUDk | ✅ Confirmed |
 | Combined $1,670M | SB $279M + BB $1,320M = $1,599M (diff ~$71M) | ⚠️ Partial (may include OC Clean or other adjustment) |
 | Springbok $279M | C126 = 279,446 AUDk | ✅ Confirmed |
-| Capital estimate $389M | Unit costs total $589M (not all may be used) | ⚠️ Needs reconciliation |
+| Capital estimate $389M | Unit costs total $387.9M (matches vault ~$389M) | ✅ Reconciled — fractional unit counts raise to $518.4M |
 | Discount rate 8% | Assumptions B2 = 0.08 | ✅ Confirmed |
 | Coal price $211.20/t | Not directly found in cached values; likely derived from PLV benchmark × FX | ℹ️ Indirectly supported |
 
