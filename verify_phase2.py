@@ -40,7 +40,7 @@ print("\n=== Speaker Notes (slides/speaker_notes.md) ===")
 with open(os.path.join(BASE, "slides/speaker_notes.md"), 'r') as f:
     notes_md = f.read()
 
-header_times = re.findall(r'\((\d+)s\)', notes_md)
+header_times = re.findall(r'\|\s*(\d+)s\)', notes_md)
 check("Speaker notes has 14 timed slides (header format)", len(header_times) == 14, f"found {len(header_times)}: {header_times}")
 if header_times:
     total = sum(int(d) for d in header_times)
