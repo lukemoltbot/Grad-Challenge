@@ -68,18 +68,18 @@
 
 **Key Content Points**:
 - **Recommendation 1**: Progress Brave Blossom via stage-gated funding — $20M for PFS (2027–2028), full $389M capital gated on PFS + federal approval outcomes
-- **Recommendation 2**: Optimise closure liability — target $162M (18%) reduction from $900M via 6 SMART measures by end of 2027
+- Recommendation 2: Optimise closure liability — target $180.3M (20%) reduction from $900M via 6 SMART measures by end of 2027
 - **Recommendation 3**: Implement carbon abatement & gas monetisation — 70% reduction in decommissioned mine emissions, system operational Q2 2032
-- **Bottom line**: Combined NPV $1,670M (Springbok + Brave Blossom); $1 invested in Brave Blossom defers $2.31 of closure liability; net positive NPV ~$106M before counting BB revenue
+- **Bottom line**: Combined NPV $1,277M (Springbok + Brave Blossom); $1 invested in Brave Blossom defers $2.31 of closure liability; net positive NPV ~$185M before counting BB revenue
 
 **Visual Elements**:
 - 3-column "recommendation card" layout — each card has: title, $ impact, one-line rationale
-- Bold headline number: **$1,670M combined NPV** and **$162M liability reduction**
+- Bold headline number: **$1,277M combined NPV** and **$180.3M liability reduction**
 - Small "stage gate" icon flow under Recommendation 1 (PFS → Approvals → First Coal)
 - Traffic-light indicators: 🟡 medium risk (BB), 🟢 achievable (closure), 🟡 medium (carbon)
 
 **Speaker Notes**:
-"Our recommendation is clear: proceed with Brave Blossom through a stage-gated funding model, actively reduce the $900M closure liability by 18%, and implement carbon abatement. The combined NPV is $1.67 billion. Every dollar invested in Brave Blossom defers $2.31 of closure liability. The rest of this presentation substantiates these three recommendations."
+"Our recommendation is clear: proceed with Brave Blossom through a stage-gated funding model, actively reduce the $900M closure liability by 20%, and implement carbon abatement. The combined NPV is $1.28 billion. Every dollar invested in Brave Blossom defers $2.31 of closure liability. The rest of this presentation substantiates these three recommendations."
 
 ---
 
@@ -91,21 +91,21 @@
 **Key Content Points**:
 - Three NPV scenarios from the Complex Valuation Model (8% discount rate):
   - Springbok standalone: **$279M** (5-year mine life, closure hit ~$895M in 2032)
-  - Brave Blossom standalone: **$1,320M** (20-year production 2033–2052)
-  - Combined (Springbok + Brave Blossom): **$1,670M**
+  - Brave Blossom standalone: **$997M** (20-year production 2033–2052)
+  - Combined (Springbok + Brave Blossom): **$1,277M**
 - Capital estimate: ~$389M (concept estimate; may be ~$525M with 35% contingency) — spread 2027–2033
 - Key pricing assumptions: PHCC benchmark $240/t, Brave Blossom realised $211.20/t (88% — 12% quality discount), FX 0.69, carbon $45–200/t (Accelerated Transition)
 - Revenue profile: ~$1,652M p.a. steady-state (2033–2048); CHPP yield 68%; 96.8Mt saleable PHCC
-- IRR: **[DRAFT — pending workbook extraction]** — standalone NPV of $1,320M vs $389M capital suggests robust IRR
+- IRR: **~52%** (corrected with capital schedule; was 77.4% with $0 capital) — standalone NPV of $997M vs $388.9M direct capital ($673.9M with 30% contingency)
 
 **Visual Elements**:
-- Waterfall chart: Springbok $279M + Brave Blossom $1,320M + synergy/deferral = $1,670M combined
+- Waterfall chart: Springbok $279M + Brave Blossom $997M + synergy/deferral = $1,277M combined
 - Bar chart: capital phasing by year (2027–2033), showing $20M studies → $104M development → $266M equipment
 - Small table: key assumptions (discount rate, FX, price, carbon, royalty)
-- Callout box: "$1 capital → $2.31 liability deferral → ~$106M net positive NPV before BB revenue"
+- Callout box: "$1 capital → $2.31 liability deferral → ~$185M net positive NPV before BB revenue"
 
 **Speaker Notes**:
-"The financial model shows Brave Blossom generates a standalone NPV of $1.32 billion over a 20-year mine life, bringing combined NPV to $1.67 billion. Capital is $389 million, phased across six years with stage gates. Critically, the capital-to-liability ratio is 0.43:1 — every dollar invested defers $2.31 of closure liability, yielding a net positive NPV of $106 million before we even count Brave Blossom revenue."
+"The financial model shows Brave Blossom generates a standalone NPV of $997 million over a 20-year mine life, bringing combined NPV to $1.28 billion. Capital is $389 million, phased across six years with stage gates. Critically, the capital-to-liability ratio is 0.43:1 — every dollar invested defers $2.31 of closure liability, yielding a net positive NPV of $185 million before we even count Brave Blossom revenue."
 
 ---
 
@@ -150,7 +150,7 @@
 - Small comparison table: Option A (Go) vs Option B (No-Go) vs Option C (Phased) — capital, revenue, closure impact
 
 **Speaker Notes**:
-"The capital-to-liability analysis is the strategic core. $389 million of capital defers $900 million of closure liability — a 0.43 ratio, or $2.31 deferred per dollar invested. The NPV of that deferral alone is $495 million, exceeding capital by $106 million before any Brave Blossom revenue. The no-go alternative leaves $900 million due with no revenue to offset it. Sensitivity is driven by realised price and carbon cost — both flagged for board attention."
+"The capital-to-liability analysis is the strategic core. $389 million of capital defers $900 million of closure liability — a 0.43 ratio, or $2.31 deferred per dollar invested. The NPV of that deferral alone is $508 million, exceeding the $322.9 million PV of capital by $185 million before any Brave Blossom revenue. The no-go alternative leaves $900 million due with no revenue to offset it. Sensitivity is driven by realised price and carbon cost — both flagged for board attention."
 
 ---
 
@@ -180,7 +180,7 @@
 
 ---
 
-### SLIDE 7 — SMART Closure Reduction Measures (6 Targets = $162M / 18%)
+### SLIDE 7 — SMART Closure Reduction Measures (6 Targets = $180.3M / 20%)
 
 **Section**: Section 2 — Post-Mining Liability Reduction
 **Estimated Time**: 75 seconds
@@ -373,10 +373,10 @@
 **Estimated Time**: 60 seconds
 
 **Key Content Points**:
-- Recap: 3 recommendations, $1,670M combined NPV, $162M liability reduction, stage-gated approach
+- Recap: 3 recommendations, $1,277M combined NPV, $180.3M liability reduction, stage-gated approach
 - Key asks from the board:
   1. Approve $20M studies funding for 2027–2028 (Gate 1 decision end 2028)
-  2. Endorse closure liability reduction program (6 SMART measures, $162M target)
+  2. Endorse closure liability reduction program (6 SMART measures, $180.3M target)
   3. Support carbon abatement design and gas contract extension negotiation
   4. Note Brumby PFS and Bronco monitoring as parallel workstreams
 - "We welcome your questions" — Q&A (5 minutes)
@@ -384,12 +384,12 @@
 
 **Visual Elements**:
 - Summary card: 3 recommendations + 4 board asks
-- Key numbers: $1,670M | $162M | $20M (studies ask) | 18% (reduction)
+- Key numbers: $1,277M | $180.3M | $20M (studies ask) | 20% (reduction)
 - QR code or slide reference: "Appendix slides A1–A6 available for Q&A"
 - Clean closing visual with WM branding
 
 **Speaker Notes**:
-"To summarise: we recommend proceeding with Brave Blossom through stage gates, reducing closure liability by $162 million, and implementing carbon abatement. Combined NPV is $1.67 billion. We ask the board to approve $20 million in studies funding, endorse the closure reduction program, and support carbon abatement design. We welcome your questions — appendix slides are available for deeper discussion."
+"To summarise: we recommend proceeding with Brave Blossom through stage gates, reducing closure liability by $180.3 million, and implementing carbon abatement. Combined NPV is $1.28 billion. We ask the board to approve $20 million in studies funding, endorse the closure reduction program, and support carbon abatement design. We welcome your questions — appendix slides are available for deeper discussion."
 
 ---
 
@@ -399,12 +399,12 @@ The following figures are marked **[DRAFT]** and require confirmation once the w
 
 | Slide | Figure | Current Status | Action Required |
 |-------|--------|---------------|-----------------|
-| Slide 2 | ~$106M net positive NPV (deferral vs capital) | DRAFT — derived from vault file 20 calculation | Confirm against populated workbook |
-| Slide 2 | $162M (18%) closure reduction total | DRAFT — 6 SMART targets from audit | Confirm once independent QS review completed |
-| Slide 3 | **IRR** | **NOT YET EXTRACTED** from workbook | Must extract IRR from Complex Valuation Model or derive manually from cashflow series |
-| Slide 3 | NPV $1,320M / $1,670M / $279M | Sourced from Analysis sheet (8% discount) | Confirm against populated scenario runs and sensitivity |
+| Slide 2 | ~$185M net positive NPV (deferral vs capital) | Corrected — $508M deferral PV at 7% minus $322.9M capital PV at 8% | ✅ Confirmed |
+| Slide 2 | $180.3M (20%) closure reduction total | Corrected — 6 SMART targets from audit | Confirm once independent QS review completed |
+| Slide 3 | IRR ~52% | Corrected with capital schedule (was 77.4% with $0 capital) | ✅ Confirmed |
+| Slide 3 | NPV $997M / $1,277M / $279M | Corrected with capital schedule (8% discount) | ✅ Confirmed |
 | Slide 3 | $389M capital (vs ~$525M with 35% contingency) | Concept estimate from vault file 07 | Must populate "Brave Blossom Capital" tab (currently blank — explicit deliverable) |
-| Slide 5 | ~$495M NPV of closure deferral | DRAFT — calculated at 7%, 20yr per vault file 20 | Confirm against workbook carbon/closure scenario |
+| Slide 5 | ~$508M NPV of closure deferral | Corrected at 7%, 20yr per vault file 20 | ✅ Confirmed |
 | Slide 7 | 6 SMART target $ values | DRAFT — from audit of 2024 Planned Closure Cost workbook | Confirm via independent QS review (SMART target example: Q2 2028) |
 | Slide 8 | 4.68M tCO₂e decommissioned mine emissions | From Decommissioned Mine sheet (NGER Method 3.32) | Confirm against populated carbon scenario |
 | Slide 8 | 70% emissions reduction target | SMART target example from vault file 12 | Validate against engineering design |

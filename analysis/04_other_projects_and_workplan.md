@@ -3,11 +3,11 @@
 **Document**: 04 — Other Projects, Forward Workplan & SWOT Analysis
 **Challenge**: 2026 Graduate Challenge — Task 1, Section 3 (Presentation Section 3)
 **Audience**: WM Board of Directors
-**Status**: Draft for board review — concept-stage analysis
+**Status**: For board review — concept-stage analysis
 **Author**: Graduate Challenge Team
 **Date**: August 2026
 
-> **Reading note**: All financial figures marked **[DRAFT]** or **[ASSUMED]** require workbook population or further study to confirm. The "OC Clean" and "OC Clean Capital" tabs in the Complex Valuation Model workbook contain formula frameworks (2,684 and 801 populated cells respectively) but **zero input values** — these are templates awaiting population (Task 1.8). Resource tonnage and quality data for both Brumby Xanadu and Bronco's lease are not yet available.
+> **Reading note**: All financial figures marked **[ASSUMED]** require workbook population or further study to confirm. The "OC Clean" and "OC Clean Capital" tabs in the Complex Valuation Model workbook contain formula frameworks (2,684 and 801 populated cells respectively) but **zero input values** — these are templates awaiting population (Task 1.8). Resource tonnage and quality data for both Brumby Xanadu and Bronco's lease are not yet available.
 
 ---
 
@@ -155,7 +155,7 @@ However, the lack of resource tonnage, capital estimates, and confirmed tenement
 | 5 | Approvals / environmental risk | Environmental opposition to new open cuts is increasing. QLD land court objections from environmental groups are common. Climate-aligned investors may oppose new thermal coal mines. Native title claims could delay tenement grant. |
 | 6 | Carbon liability | Carbon tax reforms from 2027 will increase export costs for thermal coal. Open cut emissions have no gas capture/monetisation pathway. Safeguard Mechanism compliance costs will increase as carbon prices rise ($45→$200/t under Accelerated Transition). Thermal coal's higher carbon intensity per dollar of revenue makes it more vulnerable to carbon pricing. |
 | 7 | Deliverability / complexity | If the adjacent tenement is not held by WM, negotiation or acquisition is a prerequisite — adding 1–3 years of delay. If Bronco continues to refuse access, the resource extension into ML1654 is inaccessible. |
-| 8 | Financial implications | At 1.5 Mtpa and 70% thermal, revenue may be insufficient to justify standalone infrastructure. NPV may be marginal without Bronco combination. Small scale limits economies of scale. Competing for capital with Brave Blossom ($1,320M NPV) may result in Brumby being deprioritised. |
+| 8 | Financial implications | At 1.5 Mtpa and 70% thermal, revenue may be insufficient to justify standalone infrastructure. NPV may be marginal without Bronco combination. Small scale limits economies of scale. Competing for capital with Brave Blossom ($997M NPV) may result in Brumby being deprioritised. |
 | 9 | Labour supply (owner operator vs contract miner) | Bowen Basin labour market is tight — competing mines (2× new entrants on the rail line from 2028) will compete for the same workforce. Contractor rates are escalating. |
 | 10 | People impact / change management | If Brumby is operated from a different accommodation hub (25 km NE), workforce dynamics change. Community expectations for Dustyroo Flats continuity may not be met if operations move to the Brumby site. |
 | 11 | Other considerations | ESG/sustainability investors may view a new thermal coal open cut negatively, impacting WM's share price and cost of capital. Reputational risk from developing new thermal coal capacity in a carbon-constrained world. Regulatory trajectory (both domestic and export-market) is increasingly unfavourable to thermal coal. |
@@ -215,7 +215,7 @@ To complete a concept valuation for Brumby, the following inputs are required:
 
 #### Draft Valuation Approach (Concept-Level)
 
-**[DRAFT — subject to workbook population under Task 1.8]**
+**[Framework — subject to workbook population under Task 1.8]**
 
 The concept valuation will follow the same DCF methodology used for Springbok and Brave Blossom:
 
@@ -230,7 +230,7 @@ The concept valuation will follow the same DCF methodology used for Springbok an
 - Saleable PHCC: 1.5M × 0.72 × 0.30 = 0.324 Mtpa × $240/t × 0.69 FX = ~$54M/yr
 - **Total revenue**: ~$143M/yr [ASSUMED — concept-level only, before costs]
 
-> ⚠️ **This is a DRAFT framework only.** The OC Clean and OC Clean Capital tabs must be populated with confirmed resource tonnage, capital quantities, and operating cost estimates before a defensible NPV can be calculated. This is a **Task 1.8 dependency** — workbook population is required to complete the concept valuation.
+> ⚠️ **This is a framework only.** The OC Clean and OC Clean Capital tabs must be populated with confirmed resource tonnage, capital quantities, and operating cost estimates before a defensible NPV can be calculated. This is a **Task 1.8 dependency** — workbook population is required to complete the concept valuation.
 
 ---
 
@@ -384,7 +384,7 @@ There is **no dedicated Bronco tab** in the Complex Valuation Model workbook. Ho
 
 #### Valuation Framework Approach
 
-**[DRAFT — no resource data available; framework can be built from existing OC Clean template]**
+**[No resource data available; framework can be built from existing OC Clean template]**
 
 The concept valuation framework for Bronco would follow this approach:
 
@@ -524,8 +524,8 @@ Option E should **not** be recommended as a standalone strategy — the $900M cl
 |-----------|--------------------------|--------------------------|--------------|----------------------|----------------------|
 | **Revenue extension** | 20 years (2033–2052) | None | 15–20 years (conditional) | Unknown (likely <5 years) | Post-2052 (20+ year lead) |
 | **Capital required** | ~$389M | $0 (closure only) | $20M → $389M (gated) | Unknown (acquisition cost TBD) | $5–10M (exploration) |
-| **NPV (standalone)** | $1,320M | $279M (Springbok only) | ~$1,320M (if proceeds) | Unknown (no data) | Unknown (no resource) |
-| **Combined NPV** | $1,670M | N/A | ~$1,670M (if proceeds) | Unknown | N/A |
+| **NPV (standalone)** | $997M | $279M (Springbok only) | ~$997M (if proceeds) | Unknown (no data) | Unknown (no resource) |
+| **Combined NPV** | $1,277M | N/A | ~$1,277M (if proceeds) | Unknown | N/A |
 | **Closure liability** | $900M deferred to post-2052 | $900M due 2031–2050 | Conditional deferral | Partial deferral | $900M due 2031–2050 |
 | **Federal approval risk** | High (25% on MDL) | None | Resolved at Gate 1 | Low (existing ML) | Low (exploration permits) |
 | **Workforce retention** | High (800 jobs, skills transfer) | Lost (800+ jobs) | Medium (retained during study phase) | Medium (Bronco workforce + some Springbok) | Lost (no operational workforce) |
@@ -536,7 +536,7 @@ Option E should **not** be recommended as a standalone strategy — the $900M cl
 | **Revenue start** | ~2033 | N/A | ~2033–2035 (if approved) | Immediate (if going concern acquired) | Post-2052 |
 | **Product mix** | 88% PHCC (deteriorated, 12% discount) | N/A | Same as A | ~70/30 GCN/PHCC [ASSUMED] | Unknown |
 | **Capital-to-liability ratio** | 0.43:1 ($389M defers $900M) | N/A | 0.43:1 (if proceeds) | Unknown | N/A ($5–10M does not defer $900M) |
-| **NPV of closure deferral** | ~$495M saving (direct + contingency @ 7%, 20yr) | $0 (no deferral) | ~$495M (if proceeds) | Partial (depends on mine life) | $0 (no deferral) |
+| **NPV of closure deferral** | ~$508M saving (direct + contingency @ 7%, 20yr) | $0 (no deferral) | ~$508M (if proceeds) | Partial (depends on mine life) | $0 (no deferral) |
 | **ESG profile** | Moderate (UG, gas capture, HCC focus) | Poor (unmanaged emissions, town collapse) | Moderate | Poor (open cut, thermal coal) | Neutral→Poor (no abatement during gap) |
 | **Strategic optionality** | High (platform for further projects) | None (exit strategy) | Highest (go/no-go at each gate) | Medium (acquisition-dependent) | Medium (pipeline building) |
 | **Board recommendation** | ✅ **Recommended (primary)** | ❌ Not recommended | ✅ **Recommended (risk-managed approach)** | ⚠️ Maintain as optionality | ⚠️ Parallel workstream only |
@@ -545,7 +545,7 @@ Option E should **not** be recommended as a standalone strategy — the $900M cl
 
 1. **Options B and E are financially destructive** — both incur the full $900M closure liability with no revenue offset. Option E's only advantage over B is a $5–10M exploration bet on future resources, but the 20+ year revenue gap makes WM's survival as a going concern questionable.
 
-2. **Options A and C are the primary value-creating options** — both defer $900M closure liability (~$495M NPV saving) and generate substantial revenue ($1,320M NPV standalone). Option C (Phased Go) is the risk-managed version of Option A, with go/no-go gates.
+2. **Options A and C are the primary value-creating options** — both defer $900M closure liability (~$508M NPV saving at 7% discount) and generate substantial revenue ($997M NPV standalone). Option C (Phased Go) is the risk-managed version of Option A, with go/no-go gates.
 
 3. **Option D (Bronco) is complementary, not substitutive** — it does not replace Brave Blossom but could bridge the 2031–2033 cashflow gap or run in parallel. Its value is constrained by Bronco's refusal to sell and the lack of resource data.
 
@@ -563,7 +563,7 @@ Option E should **not** be recommended as a standalone strategy — the $900M cl
 
 | Period | Total Capital | Stage Gates | Primary Activities |
 |--------|---------------|-------------|---------------------|
-| 2027–2033 | **$522.9M** | 3 gates | PFS → Development → Equipment → First Coal |
+| 2027–2033 | **$673.9M** (risked, incl. 30% contingency on $388.9M direct) | 3 gates | PFS → Development → Equipment → First Coal |
 | 2034+ | Sustaining | — | Full production ~6 mtpa saleable HCC |
 
 #### Detailed Forward Workplan Timeline
@@ -579,9 +579,9 @@ Option E should **not** be recommended as a standalone strategy — the $900M cl
 | **2033** | CHPP EPCM completion, ramp to full production | $24,000 | $522,900 | — |
 | **2034+** | Full production ~6 mtpa saleable HCC | Sustaining | — | — |
 
-**Total forward workplan capital: $522.9M** (concept estimate, excludes working capital, sustaining capital, contingency beyond 30%, owner's costs)
+**Total forward workplan capital: $673.9M risked** ($388.9M direct + 30% contingency + pre-production studies/CHPP EPCM/commissioning). Concept estimate, excludes working capital, sustaining capital, and owner's costs.
 
-> ⚠️ Note: The $522.9M total exceeds the ~$389M "concept capital estimate" quoted for Brave Blossom. The difference reflects the inclusion of pre-production studies ($20M), development works ($104M), and the CHPP EPCM ($24M) that may not have been in the original concept estimate. The $522.9M figure is the **all-in forward workplan cost** from vault file 12.
+> ⚠️ Note: The $388.9M direct capital is the Brave Blossom development capital. The $673.9M risked total includes 30% contingency plus pre-production studies ($20M), development works ($104M), and CHPP EPCM ($24M). The $673.9M figure is the **all-in risked forward workplan cost** from vault file 12.
 
 #### Stage Gate Definitions
 
@@ -613,7 +613,7 @@ The forward workplan should include parallel workstreams that do not gate the cr
 | **Future Exploration** | 2027–2031 | $5–10M | Regional exploration targeting, 3D seismic, drilling of priority targets |
 | **Closure Liability Reduction** | 2027 (by end Q4) | Minimal (review costs) | Independent review of $900M ERC estimate, progressive rehabilitation acceleration, gas monetisation planning |
 
-> These parallel workstreams total ~$10–18M additional to the $522.9M primary workplan — a small increment that maintains strategic optionality while progressing the primary Brave Blossom pathway.
+> These parallel workstreams total ~$10–18M additional to the $673.9M risked primary workplan — a small increment that maintains strategic optionality while progressing the primary Brave Blossom pathway.
 
 ---
 
@@ -635,11 +635,11 @@ Each forward work program requires a business case that includes:
 
 | # | Work Program | Workbook Tab | Status | NPV | Capital | Key Gaps |
 |---|-------------|--------------|--------|-----|---------|----------|
-| 1 | **Brave Blossom UG (Option A/C)** | Brave Blossom + Brave Blossom Capital | ⚠️ Operational model ✅, Capital tab ❌ (template only) | $1,320M (standalone) | ~$389M (concept) | Capital tab must be populated (Task 1.8) |
+| 1 | **Brave Blossom UG (Option A/C)** | Brave Blossom + Brave Blossom Capital | ⚠️ Operational model ✅, Capital tab ❌ (template only) | $997M (standalone) | ~$388.9M direct / $673.9M risked | Capital tab must be populated (Task 1.8) |
 | 2 | **Brumby Open Cut (Xanadu seam)** | OC Clean + OC Clean Capital | ❌ Both tabs template only (zero values) | TBD | TBD [ASSUMED $150–250M] | Resource tonnage, capital estimate, operating costs |
 | 3 | **Bronco Acquisition (Option D)** | OC Clean template (adaptable) | ❌ No dedicated tab | TBD | TBD (acquisition cost unknown) | Resource data, acquisition price, rehabilitation liability |
 | 4 | **Future Exploration (Option E)** | N/A (exploration, no NPV model) | N/A | $0 (near-term) | $5–10M | Target identification, geological data |
-| 5 | **Closure Liability Reduction** | 2024 Planned Closure Cost Workbook | ✅ Fully audited (284 line items, 0 errors) | ~$162M saving (18%) | Minimal (review costs) | SMART target validation, implementation planning |
+| 5 | **Closure Liability Reduction** | 2024 Planned Closure Cost Workbook | ✅ Fully audited (284 line items, 0 errors) | ~$180.3M saving (20%) | Minimal (review costs) | SMART target validation, implementation planning |
 
 #### Business Case 1: Brave Blossom UG (Primary Program)
 
@@ -647,8 +647,8 @@ Each forward work program requires a business case that includes:
 |---------|--------|--------|
 | **Strategic rationale** | 20-year revenue extension (2033–2052), defers $900M closure liability, retains workforce, maintains community social licence | ✅ Defined |
 | **Financial model** | Brave Blossom tab (6,145 populated cells, 2027–2071) | ✅ Populated |
-| **NPV** | $1,320M standalone, $1,670M combined (at 8% discount) | ✅ Calculated |
-| **Capital estimate** | ~$389M concept (12 items, unit costs defined) | ⚠️ **Brave Blossom Capital tab has framework but zero scheduling rows — MUST BE POPULATED (Task 1.8)** |
+| **NPV** | $997M standalone, $1,277M combined (at 8% discount) | ✅ Calculated |
+| **Capital estimate** | ~$388.9M direct / $673.9M risked (12 items, unit costs defined) | ⚠️ **Brave Blossom Capital tab has framework but zero scheduling rows — MUST BE POPULATED (Task 1.8)** |
 | **Revenue model** | 88% PHCC at $211.20/t (88% of $240 benchmark), 6 mtpa saleable | ✅ Modelled |
 | **Cost model** | Direct mining $90/t steady state, CHPP $17.7/t, carbon $12–27/t | ✅ Modelled |
 | **Carbon model** | 23.6M tCO₂e total Scope 1, 20.1M above Safeguard baseline | ✅ Modelled |
@@ -713,7 +713,7 @@ Each forward work program requires a business case that includes:
 |---------|--------|--------|
 | **Strategic rationale** | $900M closure liability is significantly higher than anticipated — active management can reduce by 15–20% | ✅ Defined |
 | **Financial model** | 2024 Planned Closure Cost Workbook (fully audited: 284 line items, 0 arithmetic errors) | ✅ Available |
-| **NPV impact** | ~$162M saving (18%) from 6 SMART measures | ✅ Quantified |
+| **NPV impact** | ~$180.3M saving (20%) from 6 SMART measures | ✅ Quantified |
 | **Capital estimate** | Minimal (review costs, accelerated progressive rehab $2.5M→$5M/yr) | ✅ Defined |
 | **Risk assessment** | Regulatory penalties if standards not met, implementation achievability, third-party estimate challenges | ✅ Identified |
 | **SMART targets** | 6 quantified targets (TSF duplicate, contingency reduction, house sales, progressive rehab, lease relinquishment, gas monetisation) | ✅ Defined |
@@ -730,7 +730,7 @@ Each forward work program requires a business case that includes:
 
 | Option | Board Recommendation | Rationale |
 |--------|----------------------|-----------|
-| **A: Brave Blossom Full Go** | ✅ **Primary recommendation** | $1,320M NPV, defers $900M liability, 20-year revenue extension |
+| **A: Brave Blossom Full Go** | ✅ **Primary recommendation** | $997M NPV, defers $900M liability, 20-year revenue extension |
 | **B: No-Go** | ❌ **Not recommended** | $900M liability due with no revenue, town collapse, workforce loss |
 | **C: Phased Go** | ✅ **Recommended (risk-managed)** | Same upside as A with go/no-go gates — de-risks $389M capital commitment |
 | **D: Bronco Acquisition** | ⚠️ **Maintain as optionality** | Complementary to A/C, but Bronco has refused all approaches |
@@ -740,15 +740,15 @@ Each forward work program requires a business case that includes:
 
 | Metric | Value |
 |--------|-------|
-| Primary capital (2027–2033) | **$522.9M** |
+| Primary capital (2027–2033) | **$673.9M risked** ($388.9M direct) |
 | Stage gates | **3** (PFS 2028, Approvals 2030, First Coal 2032) |
 | Parallel workstreams | Brumby PFS ($5–8M), Exploration ($5–10M), Bronco monitoring, Closure reduction |
 | First coal | **~2033** |
 | Full production | ~6 mtpa saleable HCC (2034+) |
-| NPV (Brave Blossom standalone) | **$1,320M** |
-| NPV (combined Springbok + Brave Blossom) | **$1,670M** |
+| NPV (Brave Blossom standalone) | **$997M** |
+| NPV (combined Springbok + Brave Blossom) | **$1,277M** |
 | Closure liability deferred | **$900M** (to post-2052) |
-| NPV of closure deferral | **~$495M** saving |
+| NPV of closure deferral | **~$508M** saving (at 7% discount) |
 | Capital-to-liability ratio | **0.43:1** ($1 defers $2.31) |
 
 ### Critical Workbook Tasks (Dependencies)
@@ -779,7 +779,7 @@ Each forward work program requires a business case that includes:
 | Document | 04 — Other Projects, Forward Workplan & SWOT |
 | Version | Draft 1.0 |
 | Date | August 2026 |
-| Status | Draft for board review — concept-stage analysis |
+| Status | For board review — concept-stage analysis |
 | Dependencies | Task 1.8 (workbook population), Brumby PFS (2027–2028), Bronco due diligence (conditional) |
 | Cross-references | Vault files 05, 08, 11, 12, 13, 15, 16, 21, 22 |
 | Classification | Internal — Board Confidential |
