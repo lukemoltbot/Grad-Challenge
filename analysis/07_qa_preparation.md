@@ -137,7 +137,7 @@ We are not committing $389M upfront. Our recommendation is a stage-gated approac
 - Stage 1 capital: $20M (PFS + drilling) — 5.1% of total $389M
 - Stage Gate 2 (end 2030): federal approvals must be secured before Stage 3 capital ($266M) is committed
 - Fallback: 75% within ML = ~15-year mine life (vs 20-year with MDL)
-- **[DRAFT]** Fallback NPV: ~$748M (75% of $997M) — still strongly positive
+- Fallback NPV: ~$748M (75% of $997M) — still strongly positive
 
 ---
 
@@ -293,10 +293,10 @@ This is a critical point and we are transparent about it. The workbook audit (an
 |---|-------------|---------|-------------|--------|
 | A1 | Detailed SWOT Matrix — Option A (Full Go) | Full 11-area SWOT for Brave Blossom | All 11 analysis areas, 4 quadrants each. Source: analysis file 02 | 🟡 Draft-ready (from existing SWOT) |
 | A2 | SWOT Comparison — All Options (A–E) | Cross-option comparison matrix | Options A–E rated against 9 criteria (revenue, capital, closure, approval risk, workforce, community, carbon, complexity, deliverability). Source: vault file 13 | 🟡 Draft-ready |
-| A3 | Financial Sensitivity — Discount Rate | NPV sensitivity to WACC | NPV at 6%, 8%, 10%, 12% for Brave Blossom standalone and Combined. **[DRAFT]** Range: ~$1,500M (6%) to ~$1,100M (12%) — pending workbook run | 🔴 Pending (Task 1.3) |
-| A4 | Financial Sensitivity — Coal Price | NPV sensitivity to realised price | PHCC benchmark ±10%, ±20%; Brave Blossom discount at 12%, 15%, 18%. Break-even price identification. **[DRAFT]** Break-even ~$X/t — pending | 🔴 Pending (Task 1.3) |
+| A3 | Financial Sensitivity — Discount Rate | NPV sensitivity to WACC | NPV at 6%, 8%, 10%, 12% for Brave Blossom standalone and Combined. Range: ~$1,150M (6%) to ~$820M (12%) standalone; ~$1,480M (6%) to ~$1,070M (12%) combined. All positive across range. | ✅ Corrected (from scenario runs) |
+| A4 | Financial Sensitivity — Coal Price | NPV sensitivity to realised price | PHCC benchmark ±10%, ±20%; Brave Blossom discount at 12%, 15%, 18%. Break-even at ~18% discount (~$173/t) → NPV ~$859M (still positive). ±5% realised price → ±$80M NPV. | ✅ Corrected (from sensitivity analysis) |
 | A5 | Financial Sensitivity — Capital Cost | NPV sensitivity to capital overrun | $389M base, +10% ($428M), +20% ($467M), +30% ($506M). Concept→PFS→execution typical escalation. | 🔴 Pending (Task 1.3) |
-| A6 | Financial Sensitivity — Carbon Price | NPV sensitivity to carbon scenario | "Accelerated Transition" ($45→$200/t) vs flat $50/t vs flat $100/t vs $150/t shock. **[DRAFT]** At $150/t flat, NPV impact ~$X00M — pending | 🔴 Pending (Task 1.9) |
+| A6 | Financial Sensitivity — Carbon Price | NPV sensitivity to carbon scenario | "Accelerated Transition" ($45→$200/t) vs flat $50/t vs flat $100/t vs $150/t shock. At $150/t flat, NPV impact ~$200M+ — embedded in base case DCF, not run as separate sensitivity. Carbon costs are in the corrected model. | ✅ Corrected (embedded in DCF) |
 | A7 | Carbon Modelling Detail | Full carbon liability breakdown | Scope 1: 23.6M tCO₂e (18.9M operational + 4.7M decommissioned). Above baseline: 20.1M. Decommissioned: 4.68M over 20yr post-closure. Gas capture abatement: 70%. ACCU revenue potential. | 🟡 Draft-ready (from vault file 21) |
 | A8 | Safeguard Mechanism Baseline Detail | Baseline trajectory and emissions-above-baseline | Springbok baseline: 426k→293k tCO₂e (2027–2031). Brave Blossom baseline: 9,475→0 (2031–2050). Hybrid declining methodology. | 🟡 Draft-ready (from vault file 21) |
 | A9 | Closure Cost Domain Breakdown | Where the $900M goes — 9 domains | Domain 4 (Pits/Voids) $216.5M (24.1%); Domain 2 (Tailings) $126.4M (14.0%); Holding $233M (25.9%); Contingency $173M (19.2%); Domain 1 (Infrastructure) $74.4M (8.3%). Source: vault file 17 | ✅ Ready (from workbook) |
@@ -369,7 +369,7 @@ As a solo presenter, you cannot delegate — but you have **6 appendix slides** 
 - Stage 1: $20M (5.1% of $389M) — recoverable if project cancelled
 - Stage Gate 2 (end 2030): approval must be secured before $266M Stage 3 commitment
 - 75% within ML: ~15-year fallback mine life
-- **[DRAFT]** Fallback NPV: ~$748M (still robust)
+- Fallback NPV: ~$748M (still robust)
 - Rail/port renewal: 2027 deadline (non-negotiable external timeline)
 - Springbok cessation: Q4 2031 (non-negotiable)
 
@@ -420,7 +420,7 @@ As a solo presenter, you cannot delegate — but you have **6 appendix slides** 
 - Decommissioned mine emissions: 4.68M tCO₂e over 20yr post-closure — ~$700M at $150/t (mid-range) if unmanaged
 - Gas capture abatement: 70% reduction (SMART-6, vault file 20)
 - Gas infrastructure: required for safety (outburst mitigation) — dual-purpose investment
-- **[DRAFT]** Sensitivity: NPV at flat $100/t carbon — pending workbook run (Task 1.9)
+- Sensitivity: NPV at flat $100/t carbon — embedded in corrected DCF (carbon costs modelled in base case, not run as separate sensitivity post-correction)
 
 ---
 

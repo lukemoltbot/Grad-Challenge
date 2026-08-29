@@ -174,14 +174,14 @@
 | # | Task | Status | Dependencies | Notes |
 |---|------|--------|--------------|-------|
 | 6.1 | Design presentation structure — slide-by-slide outline (15 min max) | ✅ DONE | Output: `06_slide_structure_outline.md` (564 lines). 14 slides + 6 appendix, 900s total |
-| 6.2 | Build slide deck (PowerPoint and HTML format) | ✅ DONE | PPTX: `slides/Brave_Blossom_Presentation.pptx` (20 slides, 126KB). HTML: `slides/presentation.html` (20 slides, presenter mode, charts, keyboard nav) |
+|| 6.2 | Build slide deck (PowerPoint and HTML format) | ✅ DONE | PPTX: `slides/Brave_Blossom_Presentation.pptx` (20 slides, 126KB). HTML: `slides/deck.html` (20 slides, presenter mode, CSS charts, keyboard nav, presenter notes panel) |
 | 6.3 | Section 1 slides: Brave Blossom valuation & SWOT summary | ✅ DONE | Slides 1–6 in both PPTX and HTML. Corrected NPV ($997M). SWOT as 4-quadrant card layout |
 | 6.4 | Section 2 slides: Post-mining liability reduction | ✅ DONE | Slide 7 (SMART reductions, $180.3M) + Slide 8 (Carbon) in both formats |
 | 6.5 | Section 3 slides: Other projects & forward workplan | ✅ DONE | Slides 9–11 (stage gates, infrastructure, rail/port/workforce) in both formats |
 | 6.6 | Section 4 slides: Go/no-go recommendation & timeline | ✅ DONE | Slides 12–14 (risks, financial summary, recommendation) in both formats |
 | 6.7 | Visual design — charts, graphs, infographics | ✅ DONE | PPTX: native python-pptx charts (bar, waterfall, timeline). HTML: CSS bar charts, waterfall, donut, timeline, cards |
 | 6.8 | Speaker notes / talking points for each slide | ✅ DONE | `slides/speaker_notes.md` (14 slides, 900s timed, per-slide notes with key phrases). Also embedded in PPTX notes |
-| 6.9 | Timing rehearsal — verify 15-minute flow | ✅ DONE | Timing table: 840s spoken + 60s buffer = 900s total. HTML deck has built-in timer (press T) |
+|| 6.9 | Timing rehearsal — verify 15-minute flow | ✅ DONE | `slides/speaker_notes.md`: 14 slides, 900s total (30→75→90→75→90→75→75→75→60→60→60→45→45→45). Timing table + rehearsal notes. HTML deck has built-in presenter notes panel (press N) |
 
 ---
 

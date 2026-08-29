@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wallaby Mining — Board Presentation</title>
+<style>
+:root {
+  --wm-navy: #0a2342;
+  --wm-gold: #d4a017;
+  --wm-accent: #2d6a9f;
+  --wm-green: #2d8659;
+  --wm-red: #c0392b;
+  --wm-amber: #e67e22;
+  --wm-light: #f4f6f9;
+  --wm-grey: #6c7a89;
+  --wm-border: #d1d9e6;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: #1a1a2e;
+  color: #2c3e50;
+  overflow: hidden;
+  height: 100vh;
+}
+#deck {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide {
+  width: 1280px;
+  height: 720px;
+  background: white;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  overflow: hidden;
+  border-radius: 4px;
+}
+.slide.active { display: flex; }
+
+/* Header bar */
+.slide-header {
+  height: 60px;
+  background: var(--wm-navy);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  flex-shrink: 0;
+}
+.slide-header .wm-logo {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--wm-gold);
+}
+.slide-header .slide-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.slide-header .slide-number {
+  font-size: 14px;
+  color: var(--wm-light);
+  opacity: 0.7;
+}
+
+/* Content area */
+.slide-content {
+  flex: 1;
+  padding: 28px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow: hidden;
+}
+.slide-content h2 {
+  font-size: 28px;
+  color: var(--wm-navy);
+  margin-bottom: 4px;
+}
+.slide-content h3 {
+  font-size: 20px;
+  color: var(--wm-accent);
+  margin-bottom: 8px;
+}
+.slide-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #34495e;
+}
+
+/* Cards */
+.card-grid {
+  display: grid;
+  gap: 16px;
+}
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card {
+  background: var(--wm-light);
+  border: 1px solid var(--wm-border);
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 4px solid var(--wm-accent);
+}
+.card.gold { border-left-color: var(--wm-gold); }
+.card.green { border-left-color: var(--wm-green); }
+.card.red { border-left-color: var(--wm-red); }
+.card h4 {
+  font-size: 16px;
+  color: var(--wm-navy);
+  margin-bottom: 8px;
+}
+.card .big-number {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--wm-navy);
+  margin: 4px 0;
+}
+.card .big-number.green { color: var(--wm-green); }
+.card .big-number.gold { color: var(--wm-gold); }
+.card .big-number.red { color: var(--wm-red); }
+.card .label {
+  font-size: 13px;
+  color: var(--wm-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+.card ul li {
+  font-size: 14px;
+  padding: 4px 0;
+  color: #34495e;
+}
+.card ul li::before {
+  content: "▸ ";
+  color: var(--wm-accent);
+  font-weight: bold;
+}
+
+/* Tables */
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+table.data th {
+  background: var(--wm-navy);
+  color: white;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+table.data td {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--wm-border);
+  color: #34495e;
+}
+table.data tr:nth-child(even) td { background: var(--wm-light); }
+table.data .highlight { background: #fffbe6 !important; font-weight: 600; }
+table.data .total-row td { border-top: 2px solid var(--wm-navy); font-weight: 700; color: var(--wm-navy); }
+
+/* Callout */
+.callout {
+  background: linear-gradient(135deg, var(--wm-navy), var(--wm-accent));
+  color: white;
+  padding: 20px 28px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+.callout .gold { color: var(--wm-gold); font-size: 22px; }
+.callout strong { color: var(--wm-gold); }
+
+/* Bar chart */
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.bar-label {
+  width: 180px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--wm-navy);
+  text-align: right;
+  flex-shrink: 0;
+}
+.bar-track {
+  flex: 1;
+  height: 28px;
+  background: var(--wm-light);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  transition: width 0.5s ease;
+}
+.bar-fill.navy { background: var(--wm-navy); }
+.bar-fill.gold { background: var(--wm-gold); }
+.bar-fill.green { background: var(--wm-green); }
+.bar-fill.accent { background: var(--wm-accent); }
+.bar-fill.amber { background: var(--wm-amber); }
+.bar-fill.red { background: var(--wm-red); }
+.bar-value {
+  width: 80px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--wm-navy);
+  flex-shrink: 0;
+}
+
+/* Traffic lights */
+.traffic-light {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.tl-green { background: var(--wm-green); }
+.tl-amber { background: var(--wm-amber); }
+.tl-red { background: var(--wm-red); }
+
+/* Timeline */
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--wm-border);
+  z-index: 0;
+}
+.timeline-item {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  flex: 1;
+}
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--wm-accent);
+  margin: 0 auto 8px;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--wm-accent);
+}
+.timeline-dot.gold { background: var(--wm-gold); box-shadow: 0 0 0 2px var(--wm-gold); }
+.timeline-dot.red { background: var(--wm-red); box-shadow: 0 0 0 2px var(--wm-red); }
+.timeline-year {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--wm-navy);
+}
+.timeline-label {
+  font-size: 12px;
+  color: var(--wm-grey);
+  margin-top: 2px;
+}
+
+/* Waterfall */
+.waterfall {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 16px;
+  height: 280px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--wm-border);
+  position: relative;
+}
+.waterfall-bar {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.waterfall-bar .bar {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+.waterfall-bar .bar.navy { background: var(--wm-navy); }
+.waterfall-bar .bar.gold { background: var(--wm-gold); }
+.waterfall-bar .bar.green { background: var(--wm-green); }
+.waterfall-bar .bar.accent { background: var(--wm-accent); }
+.waterfall-bar .label {
+  font-size: 12px;
+  color: var(--wm-navy);
+  font-weight: 600;
+  margin-top: 8px;
+  text-align: center;
+}
+.waterfall-bar .value {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--wm-navy);
+  margin-bottom: 4px;
+}
+
+/* Navigation */
+#nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: rgba(10,35,66,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  color: white;
+  font-size: 14px;
+  z-index: 100;
+}
+#nav-bar .counter {
+  color: var(--wm-gold);
+  font-weight: 700;
+}
+#nav-bar button {
+  background: none;
+  border: 1px solid var(--wm-gold);
+  color: var(--wm-gold);
+  padding: 4px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+#nav-bar button:hover { background: var(--wm-gold); color: var(--wm-navy); }
+#progress-bar {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  height: 3px;
+  background: var(--wm-gold);
+  z-index: 100;
+  transition: width 0.3s;
+}
+
+/* Presenter notes */
+#presenter-notes {
+  position: fixed;
+  bottom: 43px;
+  right: 12px;
+  width: 320px;
+  max-height: 200px;
+  background: rgba(10,35,66,0.97);
+  color: white;
+  padding: 14px;
+  border-radius: 6px 6px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-y: auto;
+  display: none;
+  z-index: 99;
+}
+#presenter-notes.visible { display: block; }
+#presenter-notes h5 {
+  color: var(--wm-gold);
+  font-size: 12px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.note-text { display: none; }
+.note-text.active { display: block; }
+
+/* Appendix badge */
+.appendix-badge {
+  display: inline-block;
+  background: var(--wm-amber);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 3px;
+  margin-left: 8px;
+}
+
+/* Two-column layout */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  flex: 1;
+}
+
+/* KPI row */
+.kpi-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.kpi {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  background: var(--wm-light);
+  border-radius: 8px;
+  border: 1px solid var(--wm-border);
+}
+.kpi .value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--wm-navy);
+}
+.kpi .value.green { color: var(--wm-green); }
+.kpi .value.gold { color: var(--wm-gold); }
+.kpi .label {
+  font-size: 12px;
+  color: var(--wm-grey);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Footer */
+.slide-footer {
+  height: 30px;
+  background: var(--wm-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wm-light);
+  font-size: 12px;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+</style>
+</head>
+<body>
+<div id="deck">
+
+<!-- SLIDE 1: Title -->
+<div class="slide active" data-slide="1">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Board Presentation</span>
+    <span class="slide-number">1 / 20</span>
+  </div>
+  <div class="slide-content" style="justify-content: center; align-items: center; text-align: center;">
+    <h2 style="font-size: 42px; margin-bottom: 12px;">Brave Blossom Development Decision</h2>
+    <p style="font-size: 22px; color: var(--wm-grey); margin-bottom: 32px;">Portfolio Strategy, Closure Liability & Carbon Abatement</p>
+    <div class="callout" style="width: 600px; margin-bottom: 24px;">
+      Three Recommendations · $1.28B Combined NPV · $180.3M Liability Reduction
+    </div>
+    <p style="font-size: 16px; color: var(--wm-grey);">Wallaby Mining Pty Ltd · Graduate Challenge · 2026</p>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="1">Good morning. My presentation covers the Wallaby Mining portfolio strategy — specifically the Brave Blossom development decision, our closure liability reduction program, and carbon abatement. Over fifteen minutes I'll walk through three recommendations, the financial case, and the risks. I'll hold questions to the end.</div>
+</div>
+
+<!-- SLIDE 2: Executive Summary -->
+<div class="slide" data-slide="2">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Executive Summary — Three Recommendations</span>
+    <span class="slide-number">2 / 20</span>
+  </div>
+  <div class="slide-content">
+    <div class="card-grid cols-3" style="flex: 1;">
+      <div class="card gold">
+        <h4>1. Brave Blossom: Stage-Gated Go</h4>
+        <div class="big-number gold">$997M</div>
+        <div class="label">Standalone NPV (20-year mine life)</div>
+        <ul style="margin-top: 10px;">
+          <li>Combined NPV: $1,277M</li>
+          <li>Capital: $389M direct ($674M w/ contingency)</li>
+          <li>IRR: ~52% (corrected with capital)</li>
+          <li>3 stage gates — exit at $20M / $170M</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <h4>2. Closure Liability Reduction</h4>
+        <div class="big-number green">$180.3M</div>
+        <div class="label">Target reduction (20% of $900M)</div>
+        <ul style="margin-top: 10px;">
+          <li>6 SMART measures</li>
+          <li>TSF duplicate: $39.5–43.8M</li>
+          <li>Contingency 35%→25%: $39.6M</li>
+          <li>Revised estimate: $719.7M</li>
+        </ul>
+      </div>
+      <div class="card red">
+        <h4>3. Carbon Abatement</h4>
+        <div class="big-number red">20.1M tCO₂e</div>
+        <div class="label">Above Safeguard baseline</div>
+        <ul style="margin-top: 10px;">
+          <li>Decommissioned: 4.68M tCO₂e</li>
+          <li>70% abatement target</li>
+          <li>Gas capture dual-purpose</li>
+          <li>ACCU revenue potential</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      Every <strong>$1</strong> invested in Brave Blossom defers <strong>$2.31</strong> of closure liability → <strong>$185M</strong> net positive NPV before BB revenue
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="2">Three recommendations frame this presentation. First: proceed with Brave Blossom through a stage-gated funding model — standalone NPV $997M, combined $1.28B. Second: reduce closure liability by $180.3M or 20%. Third: implement carbon abatement — 20.1Mt CO₂e above baseline. Every dollar invested defers $2.31 of closure liability. Net positive NPV $185M before BB revenue.</div>
+</div>
+
+<!-- SLIDE 3: Valuation -->
+<div class="slide" data-slide="3">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Brave Blossom Valuation</span>
+    <span class="slide-number">3 / 20</span>
+  </div>
+  <div class="slide-content">
+    <div class="kpi-row">
+      <div class="kpi"><div class="value">$997M</div><div class="label">Standalone NPV</div></div>
+      <div class="kpi"><div class="value">$1,277M</div><div class="label">Combined NPV</div></div>
+      <div class="kpi"><div class="value green">~52%</div><div class="label">IRR (corrected)</div></div>
+      <div class="kpi"><div class="value gold">$389M</div><div class="label">Direct Capital</div></div>
+      <div class="kpi"><div class="value">$674M</div><div class="label">Risked Capital (30%)</div></div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h3>Scenario Analysis</h3>
+        <table class="data">
+          <tr><th>Scenario</th><th>NPV</th><th>vs Base</th></tr>
+          <tr><td>Upside (+10% price)</td><td>$1,072M</td><td style="color:var(--wm-green)">+$75M</td></tr>
+          <tr class="highlight"><td>Base case</td><td>$997M</td><td>—</td></tr>
+          <tr><td>Downside (-10% price)</td><td>$859M</td><td style="color:var(--wm-red)">-$138M</td></tr>
+          <tr><td>Downside (75% of base)</td><td>$748M</td><td style="color:var(--wm-red)">-$249M</td></tr>
+        </table>
+        <p style="font-size: 13px; margin-top: 8px; color: var(--wm-grey);">All scenarios positive. Sensitivity: ±$80M NPV per 5% price shift.</p>
+      </div>
+      <div>
+        <h3>Capital-to-Liability Ratio</h3>
+        <div class="bar-chart" style="margin-top: 12px;">
+          <div class="bar-row">
+            <div class="bar-label">Brave Blossom NPV</div>
+            <div class="bar-track"><div class="bar-fill navy" style="width: 100%">$997M</div></div>
+            <div class="bar-value">$997M</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Combined NPV</div>
+            <div class="bar-track"><div class="bar-fill accent" style="width: 100%">$1,277M</div></div>
+            <div class="bar-value">$1,277M</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Direct Capital</div>
+            <div class="bar-track"><div class="bar-fill amber" style="width: 39%">$389M</div></div>
+            <div class="bar-value">$389M</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Closure Liability</div>
+            <div class="bar-track"><div class="bar-fill red" style="width: 90%">$900M</div></div>
+            <div class="bar-value">$900M</div>
+          </div>
+        </div>
+        <div class="callout" style="margin-top: 16px; font-size: 16px;">
+          Ratio: <strong>0.43:1</strong> → $1 capital defers <strong>$2.31</strong> liability
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="3">The financial model shows Brave Blossom generates a standalone NPV of $997M over 20 years, combined NPV $1.28B. IRR approximately 52% — corrected with full capital schedule. The earlier 77.4% was computed with zero capital, a workbook error we corrected in Phase 1. Capital-to-liability ratio 0.43:1 — every dollar defers $2.31 of closure liability, yielding $185M net positive NPV before BB revenue. Scenario range $859M–$1,072M — all positive.</div>
+</div>
+
+<!-- SLIDE 4: SWOT -->
+<div class="slide" data-slide="4">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">SWOT Summary</span>
+    <span class="slide-number">4 / 20</span>
+  </div>
+  <div class="slide-content">
+    <div class="card-grid cols-2" style="flex: 1;">
+      <div class="card green">
+        <h4>Strengths</h4>
+        <ul>
+          <li>Proven coal quality (12% discount to benchmark)</li>
+          <li>Existing rail & port infrastructure</li>
+          <li>20-year mine life — long revenue tail</li>
+          <li>Expansion capacity (4→6 mtpa)</li>
+        </ul>
+        <h4 style="margin-top: 14px;">Opportunities</h4>
+        <ul>
+          <li>Closure deferral NPV: $508M > $323M capital PV</li>
+          <li>Net positive $185M before BB revenue</li>
+          <li>ACCU revenue from methane capture</li>
+          <li>Infrastructure repurposing (Dustyroo Flats)</li>
+        </ul>
+      </div>
+      <div class="card red">
+        <h4>Weaknesses</h4>
+        <ul>
+          <li>12% quality discount to benchmark coal</li>
+          <li>$389M capital intensity vs Springbok decline</li>
+          <li>2-year workforce transition gap</li>
+          <li>CHPP end-of-life 2032</li>
+        </ul>
+        <h4 style="margin-top: 14px;">Threats</h4>
+        <ul>
+          <li>Federal approval uncertainty (MDL)</li>
+          <li>Safeguard Mechanism compliance costs</li>
+          <li>Thermal-coking coal price volatility</li>
+          <li>Competing projects (Brumby, Bronco)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="4">SWOT distils to eleven analysis areas. Key strengths: proven coal quality, existing infrastructure, 20-year mine life. Weaknesses: 12% quality discount, capital intensity, 2-year workforce gap. Opportunities: closure deferral $508M NPV exceeds $323M capital PV by $185M. Threats: federal approval, Safeguard compliance, price volatility. Each addressed in the risk register.</div>
+</div>
+
+<!-- SLIDE 5: Capital-to-Liability -->
+<div class="slide" data-slide="5">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Capital-to-Liability Analysis</span>
+    <span class="slide-number">5 / 20</span>
+  </div>
+  <div class="slide-content">
+    <div class="two-col">
+      <div>
+        <h3>The Strategic Core</h3>
+        <div class="card gold" style="margin-bottom: 16px;">
+          <div class="big-number gold">$2.31</div>
+          <div class="label">Liability deferred per $1 invested</div>
+        </div>
+        <table class="data">
+          <tr><th>Metric</th><th>Value</th></tr>
+          <tr><td>Capital invested</td><td>$389M</td></tr>
+          <tr><td>Closure liability deferred</td><td>$900M</td></tr>
+          <tr><td>Ratio (capital:liability)</td><td>0.43:1</td></tr>
+          <tr><td>NPV of deferral (7%, 20yr)</td><td>$508M</td></tr>
+          <tr><td>PV of capital (8%)</td><td>$322.9M</td></tr>
+          <tr class="total-row"><td>Net positive NPV (before BB revenue)</td><td>$185M</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3>Option Comparison</h3>
+        <div class="bar-chart" style="margin-top: 12px;">
+          <div class="bar-row">
+            <div class="bar-label">Option A: Go</div>
+            <div class="bar-track"><div class="bar-fill green" style="width: 100%">$997M NPV</div></div>
+            <div class="bar-value">$997M</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Option B: No-Go</div>
+            <div class="bar-track"><div class="bar-fill red" style="width: 5%">$0</div></div>
+            <div class="bar-value">$0</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Option C: Phased</div>
+            <div class="bar-track"><div class="bar-fill amber" style="width: 40%">~$400M</div></div>
+            <div class="bar-value">~$400M</div>
+          </div>
+        </div>
+        <div class="card red" style="margin-top: 16px;">
+          <h4>No-Go = $900M liability, zero revenue offset</h4>
+          <p style="font-size: 14px;">Phased loses 2027 rail window; inflation adds ~15% to capital</p>
+        </div>
+      </div>
+    </div>
+    <div class="callout">
+      Downside case (75% of base): <strong>$748M</strong> — still strongly positive
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="5">$389M capital defers $900M closure liability — 0.43 ratio, $2.31 per dollar. NPV of deferral $508M at 7% exceeds $323M PV of capital at 8% by $185M before BB revenue. No-go leaves $900M due with no revenue offset. Downside at 75% still $748M — strongly positive.</div>
+</div>
+
+<!-- SLIDE 6: Stage-Gated Funding -->
+<div class="slide" data-slide="6">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Stage-Gated Funding Model</span>
+    <span class="slide-number">6 / 20</span>
+  </div>
+  <div class="slide-content">
+    <div class="card-grid cols-3" style="flex: 1;">
+      <div class="card gold">
+        <h4>Stage 1: Studies</h4>
+        <div class="big-number gold">$20M</div>
+        <div class="label">2027 — PFS & Approvals</div>
+        <ul style="margin-top: 10px;">
+          <li>PFS drilling program</li>
+          <li>Environmental approvals</li>
+          <li>Frontend engineering</li>
+          <li>Rail renewal commitment</li>
+        </ul>
+        <p style="margin-top: 10px; font-size: 13px; color: var(--wm-green); font-weight: 600;">Gate 1: PFS report + MDL status + updated capital estimate</p>
+      </div>
+      <div class="card accent">
+        <h4>Stage 2: Early Works</h4>
+        <div class="big-number">$150M</div>
+        <div class="label">2028–2029</div>
+        <ul style="margin-top: 10px;">
+          <li>CHPP construction</li>
+          <li>Rail spur</li>
+          <li>Box cut</li>
+          <li>Owner-operator decision</li>
+        </ul>
+        <p style="margin-top: 10px; font-size: 13px; color: var(--wm-accent); font-weight: 600;">Gate 2: CHPP tender + rail agreement + first coal timeline</p>
+      </div>
+      <div class="card green">
+        <h4>Stage 3: Full Development</h4>
+        <div class="big-number green">$219M</div>
+        <div class="label">2030–2033</div>
+        <ul style="margin-top: 10px;">
+          <li>Full mine development</li>
+          <li>First coal ~2033</li>
+          <li>20-year production</li>
+          <li>Closure funding commences</li>
+        </ul>
+        <p style="margin-top: 10px; font-size: 13px; color: var(--wm-green); font-weight: 600;">Gate 3: Full investment decision</p>
+      </div>
+    </div>
+    <div class="card" style="border-left-color: var(--wm-red); background: #fdf2f2;">
+      <h4 style="color: var(--wm-red);">Exit Points</h4>
+      <p style="font-size: 15px;">Stage 1 fail → sunk cost $20M. Stage 2 fail → sunk cost $170M. The $900M closure liability is not increased at any exit point.</p>
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="6">Three-stage funding model. Stage 1: $20M for studies. Stage 2: $150M for early works. Stage 3: $219M for full development. Each stage has a gate. If any gate fails, we exit with sunk costs only — $20M at Stage 1, $170M at Stage 2. The $900M closure liability remains but is not increased.</div>
+</div>
+
+<!-- SLIDE 7: SMART Closure Reduction -->
+<div class="slide" data-slide="7">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">SMART Closure Reduction — 6 Targets = $180.3M (20%)</span>
+    <span class="slide-number">7 / 20</span>
+  </div>
+  <div class="slide-content">
+    <table class="data" style="flex: 1;">
+      <tr><th>#</th><th>Measure</th><th>Savings</th><th>Basis</th><th>Status</th></tr>
+      <tr><td>1</td><td>Remove duplicate TSF cost</td><td>$39.5–43.8M</td><td>Double-counted across rehabilitation & decommissioning</td><td><span class="traffic-light tl-green"></span>Confirmed</td></tr>
+      <tr><td>2</td><td>Reduce contingency 35%→25%</td><td>$39.6M</td><td>Independent QS review supports lower rate</td><td><span class="traffic-light tl-green"></span>Confirmed</td></tr>
+      <tr><td>3</td><td>Optimise earthworks sequencing</td><td>$32.0M</td><td>Concurrent backfilling reduces rehandle</td><td><span class="traffic-light tl-amber"></span>Pending PFS</td></tr>
+      <tr><td>4</td><td>Infrastructure repurposing (Dustyroo Flats)</td><td>$11.8M</td><td>505 houses avoid demolition</td><td><span class="traffic-light tl-green"></span>Confirmed</td></tr>
+      <tr><td>5</td><td>Negotiate holding cost reduction</td><td>$27.0M</td><td>Bond structure optimisation</td><td><span class="traffic-light tl-amber"></span>Negotiation</td></tr>
+      <tr><td>6</td><td>Decommissioning scope refinement</td><td>$30.5M</td><td>Plant salvage credits</td><td><span class="traffic-light tl-amber"></span>Pending PFS</td></tr>
+      <tr class="total-row"><td></td><td>TOTAL</td><td>$180.3M (20%)</td><td>Revised closure estimate: $719.7M</td><td></td></tr>
+    </table>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="7">Six SMART measures target $180.3M or 20% reduction. Top three: TSF duplicate $39.5–43.8M, contingency reduction $39.6M, earthworks $32M. Plus Dustyroo Flats $11.8M, holding cost $27M, decommissioning $30.5M. Total $180.3M. Revised estimate $719.7M.</div>
+</div>
+
+<!-- SLIDE 8: Carbon & Safeguard -->
+<div class="slide" data-slide="8">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Carbon & Safeguard Mechanism</span>
+    <span class="slide-number">8 / 20</span>
+  </div>
+  <div class="slide-content">
+    <div class="kpi-row">
+      <div class="kpi"><div class="value red">20.1M</div><div class="label">tCO₂e above baseline</div></div>
+      <div class="kpi"><div class="value gold">4.68M</div><div class="label">tCO₂e decommissioned</div></div>
+      <div class="kpi"><div class="value green">70%</div><div class="label">Abatement target</div></div>
+      <div class="kpi"><div class="value">~$200M</div><div class="label">Carbon cost in DCF</div></div>
+    </div>
+    <div class="two-col" style="flex: 1;">
+      <div>
+        <h3>The Challenge</h3>
+        <div class="card red">
+          <p>Brave Blossom emissions exceed the Safeguard baseline by 20.1M tCO₂e. Carbon cost is embedded in the DCF at ~$200M+ over mine life. Policy volatility adds uncertainty — the baseline could tighten.</p>
+        </div>
+        <h3 style="margin-top: 16px;">The Opportunity</h3>
+        <div class="card green">
+          <p>Decommissioned Springbok operation: 4.68M tCO₂e abatable through methane capture. Dual-purpose investment: generates ACCU revenue AND reduces baseline emissions. 70% abatement target is achievable with gas capture technology.</p>
+        </div>
+      </div>
+      <div>
+        <h3>Abatement Strategy</h3>
+        <div class="bar-chart">
+          <div class="bar-row">
+            <div class="bar-label">Gas capture (methane)</div>
+            <div class="bar-track"><div class="bar-fill green" style="width: 70%">70%</div></div>
+            <div class="bar-value">3.28M t</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Rehabilitation</div>
+            <div class="bar-track"><div class="bar-fill accent" style="width: 15%">15%</div></div>
+            <div class="bar-value">0.70M t</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Offset purchase</div>
+            <div class="bar-track"><div class="bar-fill amber" style="width: 15%">15%</div></div>
+            <div class="bar-value">0.70M t</div>
+          </div>
+        </div>
+        <div class="callout" style="margin-top: 16px; font-size: 16px;">
+          ACCU revenue offsets <strong>portion</strong> of carbon liability
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="8">Safeguard baseline is a hard ceiling. 20.1Mt CO₂e above baseline. Carbon cost ~$200M in DCF. But decommissioned Springbok: 4.68M tCO₂e abatable through methane capture — dual-purpose investment generating ACCU revenue. 70% abatement target. This is an opportunity, not just a cost.</div>
+</div>
+
+<!-- SLIDE 9: Risk Register -->
+<div class="slide" data-slide="9">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Risk Register — Top 5</span>
+    <span class="slide-number">9 / 20</span>
+  </div>
+  <div class="slide-content">
+    <table class="data" style="flex: 1;">
+      <tr><th>#</th><th>Risk</th><th>Prob.</th><th>Impact</th><th>Mitigation</th><th>Status</th></tr>
+      <tr><td>1</td><td>Federal approval (MDL) delay</td><td>25%</td><td>Timeline +2yr</td><td>Stage-gated model — Stage 1 only $20M</td><td><span class="traffic-light tl-amber"></span>Medium</td></tr>
+      <tr><td>2</td><td>Coal price (12% discount)</td><td>50%</td><td>±$80M NPV per 5% shift</td><td>Sensitivity tested: $859M–$1,072M range</td><td><span class="traffic-light tl-amber"></span>Medium</td></tr>
+      <tr><td>3</td><td>Carbon policy volatility</td><td>40%</td><td>~$200M in DCF</td><td>Abatement investment + ACCU revenue</td><td><span class="traffic-light tl-amber"></span>Medium</td></tr>
+      <tr><td>4</td><td>Closure estimate movement</td><td>30%</td><td>$900M base could move</td><td>Independent QS review + SMART reductions</td><td><span class="traffic-light tl-green"></span>Managed</td></tr>
+      <tr><td>5</td><td>Workforce transition gap</td><td>60%</td><td>2-year gap (2031–2033)</td><td>Cross-training + owner-operator at Stage 1</td><td><span class="traffic-light tl-green"></span>Managed</td></tr>
+    </table>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="9">Top five risks. Federal approval 25% probability, mitigated by stage gates — Stage 1 only $20M. Coal price sensitivity ±$80M per 5% shift. Carbon policy volatility mitigated by abatement investment. Closure estimate managed by QS review. Workforce gap managed by cross-training. All medium or managed.</div>
+</div>
+
+<!-- SLIDE 10: Infrastructure & CHPP -->
+<div class="slide" data-slide="10">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Infrastructure & CHPP</span>
+    <span class="slide-number">10 / 20</span>
+  </div>
+  <div class="slide-content">
+    <div class="kpi-row">
+      <div class="kpi"><div class="value">8 Mt/yr</div><div class="label">CHPP design capacity</div></div>
+      <div class="kpi"><div class="value gold">68%</div><div class="label">Yield → 5.4Mt saleable</div></div>
+      <div class="kpi"><div class="value">$24M</div><div class="label">EPCM capital</div></div>
+      <div class="kpi"><div class="value">4→6 mtpa</div><div class="label">Rail capacity (expandable)</div></div>
+    </div>
+    <div class="two-col" style="flex: 1;">
+      <div>
+        <h3>CHPP Specifications</h3>
+        <div class="card">
+          <ul>
+            <li>Design capacity: 8 Mt/yr ROM</li>
+            <li>Yield: 68% → 5.4 Mt saleable coal</li>
+            <li>EPCM delivery: $24M capital</li>
+            <li>End-of-life: 2032 (Springbok CHPP)</li>
+            <li>Brave Blossom CHPP: new build, 2032 start</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h3>Rail & Port</h3>
+        <div class="card gold">
+          <ul>
+            <li>Current capacity: 4 mtpa</li>
+            <li>Expandable: 6 mtpa</li>
+            <li>Rail renewal deadline: <strong>2027</strong></li>
+            <li>Port capacity: sufficient through 2050</li>
+            <li>2 competing mines on corridor</li>
+          </ul>
+        </div>
+        <div class="card red" style="margin-top: 12px; border-left-color: var(--wm-red);">
+          <p style="font-size: 15px; font-weight: 600; color: var(--wm-red);">2027 deadline is timing-critical — miss it and the timeline shifts 2-3 years</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="10">CHPP: 8Mt/yr design, 68% yield, 5.4Mt saleable. $24M EPCM. Existing rail 4mtpa, expandable to 6mtpa. Rail renewal deadline 2027 — aligns with Stage 1. If we miss this window, capital cost increases significantly. Timing-critical decision.</div>
+</div>
+
+<!-- SLIDE 11: Timeline -->
+<div class="slide" data-slide="11">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Timeline & Milestones</span>
+    <span class="slide-number">11 / 20</span>
+  </div>
+  <div class="slide-content">
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot gold"></div>
+          <div class="timeline-year">2027</div>
+          <div class="timeline-label">Studies start<br>Gate 1</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2029</div>
+          <div class="timeline-label">Gate 2<br>CHPP tender</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2031</div>
+          <div class="timeline-label">Springbok EOL<br>Gate 3</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot red"></div>
+          <div class="timeline-year">2033</div>
+          <div class="timeline-label">First coal<br>~18mo gap</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot green"></div>
+          <div class="timeline-year">2052</div>
+          <div class="timeline-label">Mine EOL<br>Closure funded</div>
+        </div>
+      </div>
+      <div style="margin-top: 30px;">
+        <table class="data">
+          <tr><th>Stage Gate</th><th>Timing</th><th>Decision Point</th><th>Exit Cost if Fail</th></tr>
+          <tr><td>Gate 1</td><td>Late 2027</td><td>PFS report + MDL status + updated capital estimate</td><td>$20M</td></tr>
+          <tr><td>Gate 2</td><td>2029</td><td>CHPP tender + rail agreement + first coal timeline</td><td>$170M</td></tr>
+          <tr><td>Gate 3</td><td>2031</td><td>Full development investment decision</td><td>N/A (proceed)</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="callout" style="font-size: 16px;">
+      <strong>2027 rail renewal deadline</strong> drives urgency — commit to Stage 1 this year or lose the window
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="11">Timeline: studies 2027, Springbok EOL Q4 2031, first BB coal ~2033. 18-month gap addressed in appendix. Three stage gates: Gate 1 late 2027, Gate 2 2029, Gate 3 2031. The 2027 rail renewal deadline drives the urgency — if we don't commit to Stage 1 this year, we lose the rail capacity and the timeline shifts by 2-3 years.</div>
+</div>
+
+<!-- SLIDE 12: Options Comparison -->
+<div class="slide" data-slide="12">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Options Comparison</span>
+    <span class="slide-number">12 / 20</span>
+  </div>
+  <div class="slide-content">
+    <table class="data" style="flex: 1;">
+      <tr><th>Metric</th><th>Option A: Go</th><th>Option B: No-Go</th><th>Option C: Phased</th></tr>
+      <tr><td>Capital committed</td><td>$389M (gated)</td><td>$0</td><td>$50M (studies only)</td></tr>
+      <tr><td>Standalone NPV</td><td style="color:var(--wm-green); font-weight:700;">$997M</td><td style="color:var(--wm-red);">$0</td><td style="color:var(--wm-amber);">~$400M (deferred)</td></tr>
+      <tr><td>Combined NPV</td><td style="color:var(--wm-green); font-weight:700;">$1,277M</td><td style="color:var(--wm-red);">$0</td><td style="color:var(--wm-amber);">~$600M</td></tr>
+      <tr><td>Closure liability</td><td>$900M → $719.7M (reduced)</td><td style="color:var(--wm-red);">$900M (no offset)</td><td>$900M (unaddressed)</td></tr>
+      <tr><td>Closure deferral NPV</td><td>$508M</td><td>$0</td><td>~$100M (partial)</td></tr>
+      <tr><td>Net positive (deferral − capital PV)</td><td style="color:var(--wm-green); font-weight:700;">$185M</td><td style="color:var(--wm-red);">-$900M</td><td style="color:var(--wm-amber);">~$50M</td></tr>
+      <tr><td>Rail window (2027)</td><td style="color:var(--wm-green);">Captured</td><td style="color:var(--wm-red);">Lost</td><td style="color:var(--wm-red);">Lost</td></tr>
+      <tr><td>Exit cost (max)</td><td>$170M (Stage 2)</td><td>$0</td><td>$50M</td></tr>
+    </table>
+    <div class="callout">
+      Option A dominates on every metric — <strong>stage-gated model</strong> manages downside risk
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="12">Three options. Option A: Go — $389M capital, $997M NPV, $1.28B combined, $180.3M closure reduction. Option B: No-Go — zero capital, zero revenue, $900M liability with no offset. Option C: Phased — defers decision but loses rail window. Option A dominates on every metric.</div>
+</div>
+
+<!-- SLIDE 13: Social Licence -->
+<div class="slide" data-slide="13">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Social Licence & Community</span>
+    <span class="slide-number">13 / 20</span>
+  </div>
+  <div class="slide-content">
+    <div class="card-grid cols-2" style="flex: 1;">
+      <div class="card green">
+        <h4>Dustyroo Flats</h4>
+        <div class="big-number green">$11.8M</div>
+        <div class="label">Demolition cost avoided</div>
+        <ul style="margin-top: 10px;">
+          <li>505 houses — infrastructure repurposing</li>
+          <li>CHPP site → light industrial estate</li>
+          <li>Rail spur → logistics hub</li>
+          <li>Community assets retained</li>
+        </ul>
+      </div>
+      <div class="card gold">
+        <h4>Workforce Transition</h4>
+        <div class="big-number gold">~800</div>
+        <div class="label">Jobs across both operations</div>
+        <ul style="margin-top: 10px;">
+          <li>2-year gap (2031–2033)</li>
+          <li>Cross-training programs</li>
+          <li>Owner-operator decision at Stage 1</li>
+          <li>Skills transferable to BB operations</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout" style="font-size: 16px;">
+      Social licence is a <strong>competitive advantage</strong> in the next approval cycle
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="13">Dustyroo Flats: 505 houses. Infrastructure repurposing avoids $11.8M demolition and provides community assets. Workforce: ~800 jobs. 2-year gap managed through cross-training and owner-operator decision at Stage 1. Social licence is a competitive advantage.</div>
+</div>
+
+<!-- SLIDE 14: Recommendation Summary -->
+<div class="slide" data-slide="14">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Recommendation Summary</span>
+    <span class="slide-number">14 / 20</span>
+  </div>
+  <div class="slide-content" style="justify-content: center; align-items: center; text-align: center;">
+    <h2 style="font-size: 36px; margin-bottom: 24px;">Three Recommendations</h2>
+    <div class="card-grid cols-3" style="width: 100%; margin-bottom: 24px;">
+      <div class="card gold" style="text-align: center;">
+        <h4>1. Proceed with Brave Blossom</h4>
+        <div class="big-number gold">$997M</div>
+        <div class="label">Stage-gated, $20M studies</div>
+      </div>
+      <div class="card green" style="text-align: center;">
+        <h4>2. Reduce Closure Liability</h4>
+        <div class="big-number green">$180.3M</div>
+        <div class="label">6 SMART measures, 20%</div>
+      </div>
+      <div class="card" style="text-align: center;">
+        <h4>3. Carbon Abatement</h4>
+        <div class="big-number">70%</div>
+        <div class="label">Gas capture + ACCU revenue</div>
+      </div>
+    </div>
+    <div class="callout" style="width: 80%; margin-bottom: 16px;">
+      Combined NPV: <strong>$1,277M</strong> · Net positive: <strong>$185M</strong> before BB revenue · Downside: <strong>$748M</strong>
+    </div>
+    <div style="font-size: 22px; color: var(--wm-navy); font-weight: 600; margin-top: 16px;">
+      Board ask: Approve $20M studies · Endorse closure program · Support carbon abatement design
+    </div>
+    <p style="font-size: 16px; color: var(--wm-grey); margin-top: 20px;">Thank you. Questions welcome — appendix slides available.</p>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Board Presentation</div>
+  <div class="note-text" data-note="14">To summarise: proceed with Brave Blossom through stage gates, reduce closure liability by $180.3M, implement carbon abatement. Combined NPV $1.28B. We ask the board to approve $20M in studies, endorse the closure reduction program, and support carbon abatement design. Every dollar invested defers $2.31 of closure liability. Downside case still $748M. Thank you. Questions welcome.</div>
+</div>
+
+<!-- APPENDIX SLIDES A1–A6 -->
+<!-- A1: SWOT Detail -->
+<div class="slide" data-slide="15">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Appendix A1 — SWOT Detail <span class="appendix-badge">APPENDIX</span></span>
+    <span class="slide-number">15 / 20</span>
+  </div>
+  <div class="slide-content">
+    <div class="card-grid cols-2" style="flex: 1;">
+      <div class="card green">
+        <h4>Strengths (11 areas)</h4>
+        <ul>
+          <li>Proven coal quality — 12% discount to benchmark</li>
+          <li>20-year mine life (2033–2052)</li>
+          <li>Existing rail & port infrastructure</li>
+          <li>Expansion capacity 4→6 mtpa</li>
+          <li>CHPP site repurposing potential</li>
+          <li>Established workforce (Springbok)</li>
+          <li>Strong cashflow from Springbok tail</li>
+        </ul>
+      </div>
+      <div class="card red">
+        <h4>Weaknesses</h4>
+        <ul>
+          <li>12% quality discount persistent</li>
+          <li>$389M capital intensity</li>
+          <li>2-year workforce gap</li>
+          <li>CHPP end-of-life 2032 (Springbok)</li>
+          <li>Thermal coal exposure (~30%)</li>
+        </ul>
+      </div>
+      <div class="card gold">
+        <h4>Opportunities</h4>
+        <ul>
+          <li>Closure deferral NPV: $508M @ 7%</li>
+          <li>Net positive $185M before BB revenue</li>
+          <li>ACCU revenue from methane capture</li>
+          <li>Dustyroo Flats: $11.8M demolition avoided</li>
+          <li>Logistics hub from rail spur</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left-color: var(--wm-red);">
+        <h4>Threats</h4>
+        <ul>
+          <li>MDL approval uncertainty (25%)</li>
+          <li>Safeguard Mechanism compliance</li>
+          <li>Coal price volatility (±5% → ±$80M)</li>
+          <li>Competing projects: Brumby (PFS), Bronco</li>
+          <li>ESG investor pressure on thermal coal</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Appendix</div>
+  <div class="note-text" data-note="15">Appendix A1 — SWOT detail. Use if asked about specific strengths or weaknesses. Eleven analysis areas across five documents.</div>
+</div>
+
+<!-- A2: Cross-Option Matrix -->
+<div class="slide" data-slide="16">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Appendix A2 — Cross-Option Matrix <span class="appendix-badge">APPENDIX</span></span>
+    <span class="slide-number">16 / 20</span>
+  </div>
+  <div class="slide-content">
+    <table class="data" style="flex: 1;">
+      <tr><th>Criterion</th><th>A: Go (Stage-Gated)</th><th>B: No-Go</th><th>C: Phased</th><th>D: Divest</th><th>E: JV Partner</th></tr>
+      <tr><td>NPV (standalone)</td><td style="color:var(--wm-green);">$997M</td><td>$0</td><td style="color:var(--wm-amber);">~$400M</td><td>~$300M (sale)</td><td>~$598M (60% JV)</td></tr>
+      <tr><td>Combined NPV</td><td style="color:var(--wm-green);">$1,277M</td><td>$0</td><td>~$600M</td><td>~$300M</td><td>~$766M</td></tr>
+      <tr><td>Capital (max committed)</td><td>$674M (risked)</td><td>$0</td><td>$50M</td><td>$0</td><td>$404M (60%)</td></tr>
+      <tr><td>Closure liability</td><td>$719.7M (reduced)</td><td>$900M</td><td>$900M</td><td>$900M (transferred)</td><td>$719.7M (shared)</td></tr>
+      <tr><td>Net positive (deferral − cap PV)</td><td style="color:var(--wm-green);">$185M</td><td style="color:var(--wm-red);">-$900M</td><td>~$50M</td><td>N/A</td><td>~$111M</td></tr>
+      <tr><td>Rail window 2027</td><td style="color:var(--wm-green);">✅ Captured</td><td style="color:var(--wm-red);">❌ Lost</td><td style="color:var(--wm-red);">❌ Lost</td><td>N/A</td><td style="color:var(--wm-green);">✅ Captured</td></tr>
+      <tr><td>Exit flexibility</td><td style="color:var(--wm-green);">High (gated)</td><td>N/A</td><td>Medium</td><td style="color:var(--wm-green);">High (sale)</td><td>Low (locked)</td></tr>
+      <tr><td>Board control</td><td style="color:var(--wm-green);">Full</td><td>N/A</td><td style="color:var(--wm-green);">Full</td><td>None</td><td>Shared 60%</td></tr>
+    </table>
+    <div class="callout">Option A (Go) dominates on NPV, closure, rail window, and control. Option E (JV) is viable fallback if capital constrained.</div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Appendix</div>
+  <div class="note-text" data-note="16">Appendix A2 — Cross-option matrix. Five options compared. Option A dominates. Option E (JV) viable if capital constrained — 60% JV share ~$598M NPV.</div>
+</div>
+
+<!-- A3: Price Sensitivity -->
+<div class="slide" data-slide="17">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Appendix A3 — Price Sensitivity <span class="appendix-badge">APPENDIX</span></span>
+    <span class="slide-number">17 / 20</span>
+  </div>
+  <div class="slide-content">
+    <h3>Coal Price Sensitivity — ±5% realised price → ±$80M NPV</h3>
+    <div class="bar-chart" style="margin-top: 20px; flex: 1;">
+      <div class="bar-row">
+        <div class="bar-label">+15% price</div>
+        <div class="bar-track"><div class="bar-fill green" style="width: 100%">$1,149M</div></div>
+        <div class="bar-value">$1,149M</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">+10% price</div>
+        <div class="bar-track"><div class="bar-fill green" style="width: 88%">$1,072M</div></div>
+        <div class="bar-value">$1,072M</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">+5% price</div>
+        <div class="bar-track"><div class="bar-fill accent" style="width: 78%">$1,034M</div></div>
+        <div class="bar-value">$1,034M</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Base case</div>
+        <div class="bar-track"><div class="bar-fill navy" style="width: 75%">$997M</div></div>
+        <div class="bar-value">$997M</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">-5% price</div>
+        <div class="bar-track"><div class="bar-fill amber" style="width: 68%">$917M</div></div>
+        <div class="bar-value">$917M</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">-10% price</div>
+        <div class="bar-track"><div class="bar-fill red" style="width: 65%">$859M</div></div>
+        <div class="bar-value">$859M</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">-15% price</div>
+        <div class="bar-track"><div class="bar-fill red" style="width: 58%">$748M</div></div>
+        <div class="bar-value">$748M</div>
+      </div>
+    </div>
+    <div class="callout" style="font-size: 16px;">Scenario range: <strong>$859M – $1,072M</strong> — all scenarios positive</div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Appendix</div>
+  <div class="note-text" data-note="17">Appendix A3 — Price sensitivity. ±5% realised price → ±$80M NPV. Range $859M–$1,072M. All scenarios positive.</div>
+</div>
+
+<!-- A4: NPV of Closure Deferral -->
+<div class="slide" data-slide="18">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Appendix A4 — NPV of Closure Deferral <span class="appendix-badge">APPENDIX</span></span>
+    <span class="slide-number">18 / 20</span>
+  </div>
+  <div class="slide-content">
+    <h3>Why $1 Capital Defers $2.31 Liability — and Why That's Net Positive</h3>
+    <table class="data" style="margin-top: 16px;">
+      <tr><th>Component</th><th>Nominal</th><th>Discount Rate</th><th>Present Value</th></tr>
+      <tr><td>Closure liability deferred by BB development</td><td>$900M</td><td>7% (20yr)</td><td>$508M</td></tr>
+      <tr><td>Capital invested (direct, $389M nominal)</td><td>$389M</td><td>8%</td><td>$322.9M</td></tr>
+      <tr class="total-row"><td>Net positive NPV (before BB revenue)</td><td></td><td></td><td>$185M</td></tr>
+    </table>
+    <div class="two-col" style="margin-top: 24px; flex: 1;">
+      <div class="card">
+        <h4>Key Insight</h4>
+        <p>The closure liability is discounted at 7% (regulatory rate) while capital is discounted at 8% (WACC). The 20-year deferral period amplifies the difference — $900M in 2052 is worth far less today than the capital spent in 2027–2033.</p>
+      </div>
+      <div class="card green">
+        <h4>Even Without BB Revenue...</h4>
+        <p>Even if Brave Blossom produced zero revenue, the deferral of closure liability alone creates $185M of positive NPV. The $997M standalone NPV from coal sales is on top of this.</p>
+      </div>
+    </div>
+    <div class="callout">$508M deferral PV − $322.9M capital PV = <strong>$185M net positive</strong> before BB revenue</div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Appendix</div>
+  <div class="note-text" data-note="18">Appendix A4 — NPV of closure deferral. $508M deferral PV at 7% minus $322.9M capital PV at 8% = $185M net positive. Even without BB revenue, deferral alone is positive. The $997M NPV from coal is on top.</div>
+</div>
+
+<!-- A5: Closure Cost Domains -->
+<div class="slide" data-slide="19">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Appendix A5 — Closure Cost Domains <span class="appendix-badge">APPENDIX</span></span>
+    <span class="slide-number">19 / 20</span>
+  </div>
+  <div class="slide-content">
+    <table class="data" style="flex: 1;">
+      <tr><th>Domain</th><th>Base Cost</th><th>% of $900M</th><th>SMART Reduction</th><th>Revised</th></tr>
+      <tr><td>Direct rehabilitation (earthworks)</td><td>$310M</td><td>34%</td><td>-$32M (sequencing)</td><td>$278M</td></tr>
+      <tr><td>TSF (tailings storage facility)</td><td>$95M</td><td>11%</td><td>-$42M (duplicate removed)</td><td>$53M</td></tr>
+      <tr><td>Contingency (35% of direct)</td><td>$173M</td><td>19%</td><td>-$39.6M (35%→25%)</td><td>$133.4M</td></tr>
+      <tr><td>Infrastructure decommissioning</td><td>$84M</td><td>9%</td><td>-$30.5M (salvage credits)</td><td>$53.5M</td></tr>
+      <tr><td>Dustyroo Flats demolition</td><td>$12M</td><td>1%</td><td>-$11.8M (repurposing)</td><td>$0.2M</td></tr>
+      <tr><td>Holding/maintenance cost</td><td>$233M</td><td>26%</td><td>-$27M (bond optimisation)</td><td>$206M</td></tr>
+      <tr class="total-row"><td>TOTAL</td><td>$900M</td><td>100%</td><td>-$180.3M (20%)</td><td>$719.7M</td></tr>
+    </table>
+    <div class="callout">Revised closure estimate: <strong>$719.7M</strong> — pending independent QS review</div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Appendix</div>
+  <div class="note-text" data-note="19">Appendix A5 — Closure cost domains. Six domains totalling $900M base. SMART reductions $180.3M. Revised estimate $719.7M. Pending QS review.</div>
+</div>
+
+<!-- A6: Timeline Detail -->
+<div class="slide" data-slide="20">
+  <div class="slide-header">
+    <span class="wm-logo">WALLABY MINING</span>
+    <span class="slide-title">Appendix A6 — Timeline & Stage Gate Detail <span class="appendix-badge">APPENDIX</span></span>
+    <span class="slide-number">20 / 20</span>
+  </div>
+  <div class="slide-content">
+    <table class="data" style="flex: 1;">
+      <tr><th>Phase</th><th>Years</th><th>Activities</th><th>Capital</th><th>Gate Criteria</th><th>Exit Cost</th></tr>
+      <tr><td>Stage 1: Studies</td><td>2027</td><td>PFS drilling, env. approvals, FEED, rail renewal</td><td>$20M</td><td>PFS report, MDL status, updated capex</td><td>$20M</td></tr>
+      <tr><td>Stage 2: Early Works</td><td>2028–2029</td><td>CHPP construction, rail spur, box cut, owner-ops decision</td><td>$150M</td><td>CHPP tender, rail agreement, first coal timeline</td><td>$170M</td></tr>
+      <tr><td>Stage 3: Full Dev</td><td>2030–2033</td><td>Full mine development, production ramp</td><td>$219M</td><td>Full investment decision</td><td>N/A</td></tr>
+      <tr><td>Production</td><td>2033–2052</td><td>20-year mine life, 5.4Mt/yr saleable</td><td>—</td><td>Annual review</td><td>—</td></tr>
+      <tr><td>Closure</td><td>2052+</td><td>Rehabilitation, monitoring, Dustyroo Flats</td><td>$719.7M</td><td>Regulatory sign-off</td><td>—</td></tr>
+    </table>
+    <div class="card" style="margin-top: 16px;">
+      <h4>Critical Path</h4>
+      <p style="font-size: 15px;"><strong>2027 rail renewal deadline</strong> → Stage 1 commitment required this year. Springbok CHPP end-of-life 2032 → new CHPP must be operational by 2033. The 18-month gap between Springbok closure (Q4 2031) and BB first coal (~2033) is bridged by workforce cross-training and balance sheet / JV capital contribution. Cumulative DCF turns positive in 2032 at ~$295M (combined scenario).</p>
+    </div>
+  </div>
+  <div class="slide-footer">Wallaby Mining — Appendix</div>
+  <div class="note-text" data-note="20">Appendix A6 — Timeline detail. Five phases: studies, early works, full dev, production, closure. Critical path: 2027 rail renewal → Stage 1 this year. 18-month gap bridged by cross-training and balance sheet. Cumulative DCF positive 2032 at ~$295M.</div>
+</div>
+
+</div>
+
+<!-- Navigation -->
+<div id="progress-bar" style="width: 5%;"></div>
+<div id="nav-bar">
+  <button onclick="prevSlide()">◀ Prev</button>
+  <span class="counter">Slide <span id="current">1</span> / 20</span>
+  <button onclick="nextSlide()">Next ▶</button>
+</div>
+<div id="presenter-notes">
+  <h5>Speaker Notes</h5>
+  <div id="note-content"></div>
+</div>
+
+<script>
+let currentSlide = 1;
+const totalSlides = 20;
+const slides = document.querySelectorAll('.slide');
+const notes = document.querySelectorAll('.note-text');
+
+function showSlide(n) {
+  slides.forEach(s => s.classList.remove('active'));
+  notes.forEach(n => n.classList.remove('active'));
+  const slide = document.querySelector(`.slide[data-slide="${n}"]`);
+  const note = document.querySelector(`.note-text[data-note="${n}"]`);
+  if (slide) slide.classList.add('active');
+  if (note) note.classList.add('active');
+  document.getElementById('current').textContent = n;
+  document.getElementById('progress-bar').style.width = (n / totalSlides * 100) + '%';
+  updateNotes();
+}
+
+function nextSlide() {
+  if (currentSlide < totalSlides) {
+    currentSlide++;
+    showSlide(currentSlide);
+  }
+}
+
+function prevSlide() {
+  if (currentSlide > 1) {
+    currentSlide--;
+    showSlide(currentSlide);
+  }
+}
+
+function updateNotes() {
+  const note = document.querySelector(`.note-text[data-note="${currentSlide}"]`);
+  document.getElementById('note-content').textContent = note ? note.textContent : '';
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+    e.preventDefault();
+    nextSlide();
+  } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+    e.preventDefault();
+    prevSlide();
+  } else if (e.key === 'n' || e.key === 'N') {
+    const notesPanel = document.getElementById('presenter-notes');
+    notesPanel.classList.toggle('visible');
+    if (notesPanel.classList.contains('visible')) updateNotes();
+  } else if (e.key === 'Home') {
+    currentSlide = 1;
+    showSlide(1);
+  } else if (e.key === 'End') {
+    currentSlide = totalSlides;
+    showSlide(totalSlides);
+  } else if (e.key >= '1' && e.key <= '9') {
+    const num = parseInt(e.key);
+    if (num <= totalSlides) {
+      currentSlide = num;
+      showSlide(currentSlide);
+    }
+  }
+});
+
+showSlide(1);
+</script>
+</body>
+</html>
