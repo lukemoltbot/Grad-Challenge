@@ -1,8 +1,8 @@
 # Complex Valuation Model — Workbook Analysis
 
 > **Source**: `Complex_Valuation_Model.xlsx` (provided as supplement to the 2026 Graduate Challenge)
-> **Sheets**: 16 | **Time span**: 2011 (historical) → 2075 (carbon/decommissioning)
-> **Created**: 2026-08-29
+> **Sheets**: 15 (corrected from initial estimate of 16 — "Brave Blossom (2)" does not exist in the actual workbook) | **Time span**: 2011 (historical) → 2075 (carbon/decommissioning)
+> **Created**: 2026-08-29 | **Updated**: 2026-08-29 (audited against actual workbook file)
 > **Cross-refs**: Files 03 (Springbok), 04 (Brave Blossom), 05 (Key Considerations), 07 (Capital Estimate), 15 (Brumby OC), 17 (Closure Costs)
 
 ---
@@ -26,7 +26,9 @@ The combined cumulative DCF turns positive in 2032 (~AUD 295M) after absorbing t
 
 ## Sheet-by-Sheet Breakdown
 
-### 1. Assumptions (58 rows × 74 cols)
+> **Corrected from initial vault analysis**. The actual workbook has 15 sheets (not 16). "Brave Blossom (2)" does not exist. "SpringbokCapital" is a separate sheet (was previously described as part of the Springbok sheet). Sheet name "Brave Blossom " has a trailing space in the actual file.
+
+### 1. Assumptions (58 rows × 74 cols, 2019 populated cells)
 **Purpose**: Master input sheet driving all calculations. Year columns 2021–2091 (71 years).
 
 | Parameter | Value |
@@ -43,7 +45,7 @@ The combined cumulative DCF turns positive in 2032 (~AUD 295M) after absorbing t
 | QLD royalty | Tiered: $0–100/t @ 7%, $100–150/t @ 12.5%, $150–175/t @ 15%, $175–225/t @ 20%, $225–300/t @ 30%, >$300/t @ 40% |
 | Royalty on first threshold | AUD 7.00/t (= $100 × 7%) |
 
-### 2. Analysis (24 rows × 37 cols)
+### 2. Analysis (24 rows × 37 cols, 404 populated cells)
 **Purpose**: High-level DCF summary and comparison across scenarios. Years 2021–2052.
 
 Key outputs:
@@ -53,7 +55,7 @@ Key outputs:
 - **Cumulative DCF**: Combined reaches AUD 1.67B by 2052. Springbok-only peaks at AUD 279M (2027) then declines to AUD 279M flat post-closure
 - **Brave Blossom standalone cumulative**: AUD 1,390M by 2052
 
-### 3. List (4 rows × 8 cols)
+### 3. List (4 rows × 8 cols, 20 populated cells)
 **Purpose**: Dropdown validation lists for the Springbok Assumptions sheet.
 - Owner/operate vs Contract
 - Roster: 7on7off, 5on2off, Other
@@ -62,7 +64,7 @@ Key outputs:
 - Progressive rehab: Yes/No
 - Maintenance: Preventative, Corrective, Increase 10%, Decrease 10%
 
-### 4. Summary (57 rows × 146 cols)
+### 4. Summary (57 rows × 146 cols, 546 populated cells)
 **Purpose**: Dashboard sheet for revenue and cost graphs. Two sections:
 
 **Section 1 — Springbok Historical + Forecast (2022–2031)**:
@@ -78,12 +80,12 @@ Key outputs:
 - Carbon cost rises from AUD 12/t (2033) to AUD 27/t (2050)
 - Royalty: AUD 55–80/t
 
-### 5. Historical Performance (170 rows × 9 cols)
+### 5. Historical Performance (170 rows × 9 cols, 851 populated cells)
 **Purpose**: Springbok Complex actuals 2011–2025 (15 years).
 
 Covers: ROM production, strip ratio, CHPP feed/yield/product, marketing splits (PHCC, GCN), coal quality (energy, ash), costs per tonne, revenue. Provides the basis for forecast calibration.
 
-### 6. Springbok Assumptions (10 rows × 3 cols)
+### 6. Springbok Assumptions (10 rows × 3 cols, 26 populated cells)
 **Purpose**: Scenario toggle — Current vs Proposed operating configuration.
 
 | Parameter | Current | Proposed |
@@ -99,7 +101,7 @@ Covers: ROM production, strip ratio, CHPP feed/yield/product, marketing splits (
 
 > The "Proposed" column appears to model a **cost-optimised / life-extension** scenario: faster development (5-on-2-off + extra miner), upgraded gas drainage (UIS), deferred rehabilitation, and shift from preventive to corrective maintenance. These levers directly affect the closure liability and life-of-mine economics.
 
-### 7. Springbok (161 rows × 35 cols)
+### 7. Springbok (161 rows × 35 cols, 2751 populated cells)
 **Purpose**: Full operational + financial model for Springbok Complex, 2027–2053.
 
 Key parameters:
@@ -115,9 +117,12 @@ Key parameters:
 - **NPV**: AUD 279M
 - **Mine life**: 5 years (2027–2031), closure in 2032
 
-Capital schedule (SpringbokCapital sheet): AUD 122,800k base + 20% contingency = **AUD 147,360k total** over 2027–2031. Items: replacement miner, ventilation shaft, SIS drill program, roof supports, conveyor belt, community program, TSF, exploration.
+Capital schedule is on the separate **SpringbokCapital** sheet (see sheet 8 below). AUD 122,800k base + 20% contingency = **AUD 147,360k total** over 2027–2031. Items: replacement miner, ventilation shaft, SIS drill program, roof supports, conveyor belt, community program, TSF, exploration.
 
-### 8. Brave Blossom (150 rows × 72 cols)
+### 8. SpringbokCapital (48 rows × 22 cols, 465 populated cells)
+**Purpose**: Capital schedule for Springbok Complex, 2027–2031. Separate sheet (was previously described as part of sheet 7). Fully populated with capital items, unit costs, and scheduling across years. Items: replacement miner, ventilation shaft, SIS drill program, roof supports, conveyor belt, community program, TSF, exploration.
+
+### 9. Brave Blossom (151 rows × 72 cols, 6145 populated cells)
 **Purpose**: Full operational + financial model for Brave Blossom UG project, 2027–2071.
 
 Key parameters:
@@ -132,13 +137,10 @@ Key parameters:
 - **NPV**: AUD 1,320M
 - **Mine life**: ~20 years production (2033–2052), post-closure emissions to 2071
 
-### 9. Brave Blossom (2) (150 rows × 72 cols)
-**Purpose**: Alternative Brave Blossom scenario — identical structure to sheet 8.
-
-Key difference: **Decommissioned mine emissions are lower** (15.4M tCO₂e above baseline vs 20.1M in sheet 8). This suggests a different closure configuration or emissions mitigation strategy. The operational emissions (pre-closure) are identical. Appears to model an alternative decommissioning approach (e.g., flaring or different flooding rate).
-
-### 10. Brave Blossom Capital (66 rows × 30 cols)
+### 10. Brave Blossom Capital (66 rows × 30 cols, 882 populated cells)
 **Purpose**: Capital schedule template for Brave Blossom, 2027–2053.
+
+**Status**: Has structural framework (year headers via formula, 12 capital items defined with unit costs AUD 5k–190k) but **unit-number scheduling rows are all zero** — the capital items are listed with their unit costs, but the number of units per year has not been entered. Needs population of unit quantities by year to complete the capital schedule.
 
 12 capital items defined with unit costs (AUD 5k–190k):
 | Item | Unit Cost (AUDk) |
@@ -153,9 +155,9 @@ Key difference: **Decommissioned mine emissions are lower** (15.4M tCO₂e above
 | (1 item @ $69.9k) | 69,900 |
 | (1 item @ $24k) | 24,000 |
 
-Contingency: 30%. **Currently all zero in cost rows** — template awaiting population (units not yet assigned to years).
+Contingency: 30%. **Unit-number scheduling rows are zero** — template framework exists (882 cells with formulas/labels) but capital quantities by year not yet assigned.
 
-### 11. Historical Performance BrumbyOC (162 rows × 8 cols)
+### 11. Historical Performance BrumbyOC (162 rows × 8 cols, 107 populated cells)
 **Purpose**: Brumby Open Cut historical actuals, 2011–2015 (5 years).
 
 Key data:
@@ -166,7 +168,7 @@ Key data:
 - GCN energy: 6,212–6,290 kcal/kg (gar), ash 9.2–10.1%
 - Provides benchmark data for the OC Clean proposal
 
-### 12. OC Clean (153 rows × 35 cols)
+### 12. OC Clean (154 rows × 35 cols, 2684 populated cells)
 **Purpose**: Open cut proposal model — "OC - Proposal" / SandsEnd. 2027–2052.
 
 Structure mirrors Springbok sheet but for an open cut operation:
@@ -174,9 +176,9 @@ Structure mirrors Springbok sheet but for an open cut operation:
 - Mining: T&S + Dragline waste removal, blasted prime waste
 - Carbon: Scope 1 @ 0.1 tCO₂e/t ROM, safeguard declining baseline, 21-year mine life
 - Products: Coking Product A + Thermal Product A
-- **All operational values currently zero** — template ready for input
+- **Has formula structure (2684 populated cells)** but operational values are zero/template — formula framework ready for input.
 
-### 13. OC Clean Capital (71 rows × 25 cols)
+### 13. OC Clean Capital (71 rows × 25 cols, 801 populated cells)
 **Purpose**: Capital schedule for SandsEnd open cut, 2027–2048.
 
 26 capital items defined:
@@ -195,9 +197,9 @@ Structure mirrors Springbok sheet but for an open cut operation:
 | Creek Crossing Civil Work | 20,000 |
 | Water Management Dams | 7,500 |
 
-**All cost rows zero** — template awaiting scheduling.
+**Cost scheduling rows are zero** — template framework exists (801 cells with formulas/labels) but quantities by year not yet assigned.
 
-### 14. Carbon (6 rows × 51 cols)
+### 14. Carbon (6 rows × 51 cols, 153 populated cells)
 **Purpose**: Carbon price forecast scenarios, 2026–2075.
 
 Two scenarios:
@@ -208,7 +210,7 @@ Two scenarios:
 
 The "Accelerated Transition" curve: ramps steeply to $120/t by 2038, plateaus, then climbs again to $200/t from 2064+. This is the active scenario (referenced in Assumptions cell C20).
 
-### 15. Decommissioned Mine (36 rows × 134 cols)
+### 15. Decommissioned Mine (36 rows × 134 cols, 987 populated cells)
 **Purpose**: Post-closure methane (CH₄) emissions model per NGER Method 3.32 (Part 2). Calculates fugitive emissions from sealed/abandoned underground mines.
 
 Three closure scenarios modelled:
@@ -231,14 +233,12 @@ Key inputs: mine void volume, flood rate, gassy classification, CH₄ emissions 
 Assumptions ──drives──→ All operational sheets
     │
     ├── Springbok (NPV $279M) ←── Springbok Assumptions (scenario toggle)
-    │       └── SpringbokCapital ($147M capex)
+    │       └── SpringbokCapital ($147M capex, fully populated)
     │
-    ├── Brave Blossom (NPV $1,320M)
-    │       └── Brave Blossom Capital (template, unpopulated)
+    ├── Brave Blossom (NPV $1,320M) — sheet name has trailing space
+    │       └── Brave Blossom Capital (framework exists, scheduling rows zero)
     │
-    ├── Brave Blossom (2) — alternative decommissioning scenario
-    │
-    ├── OC Clean (template, NPV $0) ←── OC Clean Capital (template)
+    ├── OC Clean (formula structure, values zero) ←── OC Clean Capital (framework, scheduling zero)
     │
     ├── Carbon → feeds carbon cost into all models
     │
@@ -247,17 +247,20 @@ Assumptions ──drives──→ All operational sheets
     ├── Analysis ← aggregates Springbok + Brave Blossom DCFs
     │       └── Summary ← dashboard graphs
     │
+    ├── List → dropdown validation for Springbok Assumptions
     ├── Historical Performance (Springbok 2011–2025)
     └── Historical Performance BrumbyOC (Brumby 2011–2015)
 ```
+
+> **Note**: "Brave Blossom (2)" was listed in the initial vault analysis but does NOT exist in the actual workbook. The alternative decommissioning scenario described may have been removed or never existed in the final file version provided.
 
 ---
 
 ## Key Observations
 
-1. **The model is partially populated**: Springbok and Brave Blossom (sheet 8) are fully built with formulas. OC Clean, OC Clean Capital, and Brave Blossom Capital are template shells — all input cells are zero, awaiting scheduling.
+1. **The model is partially populated**: Springbok and Brave Blossom (sheet 9) are fully built with formulas. OC Clean, OC Clean Capital, and Brave Blossom Capital have structural frameworks (formula templates, item lists, year headers) but the actual input quantities are zero — awaiting scheduling.
 
-2. **Two Brave Blossom variants** exist (sheets 8 & 9) differing only in decommissioned mine emissions (20.1M vs 15.4M tCO₂e above baseline). The difference (~4.7M tCO₂e) equals the full decommissioned mine emissions — suggesting sheet 9 models a scenario where post-closure CH₄ is mitigated (e.g., flaring capture).
+2. **"Brave Blossom (2)" does not exist** in the actual workbook. The initial vault analysis (based on pre-workbook information) described an alternative decommissioning scenario sheet. This sheet is not present in the provided file. The Decommissioned Mine sheet (15) still models three closure scenarios independently.
 
 3. **The AUD 895M closure hit** appears in 2032 in the Analysis sheet (row 7, column N = −895,000). This aligns with the $900M ERC closure cost estimate from the 2024 closure workbook (see File 17).
 
@@ -270,3 +273,7 @@ Assumptions ──drives──→ All operational sheets
 7. **Royalty structure** is the QLD tiered ad valorem system: 7% on first $100/t, 12.5% to $150, 15% to $175, 20% to $225, 30% to $300, 40% above $300. At $240/t PHCC, the effective royalty rate is significant (blended ~25-29%).
 
 8. **Brave Blossom product is 88% PHCC** at $211.20/t (88% of the $240/t benchmark), not full-spec PHCC. This is a **33% lower price realisation** than Springbok's $240/t PHCC — a critical assumption affecting the AUD 1.32B NPV. Sensitivity analysis on this parameter would be valuable.
+
+9. **SpringbokCapital is a separate sheet** (sheet 8 in the actual workbook), not embedded in the Springbok sheet. It is fully populated with 465 cells covering capital items, unit costs, and year-by-year scheduling. This is a correctly built capital schedule that can serve as a template for the Brave Blossom Capital tab.
+
+10. **OC Clean and OC Clean Capital have formula frameworks** (2684 and 801 populated cells respectively) but operational/cost values are zero. They are not truly "blank" — the formula structure exists, just needs input data.
