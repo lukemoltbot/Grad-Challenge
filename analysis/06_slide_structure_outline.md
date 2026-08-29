@@ -96,7 +96,7 @@
 - Capital estimate: ~$389M (concept estimate; may be ~$525M with 35% contingency) — spread 2027–2033
 - Key pricing assumptions: PHCC benchmark $240/t, Brave Blossom realised $211.20/t (88% — 12% quality discount), FX 0.69, carbon $45–200/t (Accelerated Transition)
 - Revenue profile: ~$1,652M p.a. steady-state (2033–2048); CHPP yield 68%; 96.8Mt saleable PHCC
-- IRR: **~52%** (corrected with capital schedule; was 77.4% with $0 capital) — standalone NPV of $997M vs $388.9M direct capital ($673.9M with 30% contingency)
+- IRR: **~52%** (corrected with capital schedule; was the original cached value with $0 capital) — standalone NPV of $997M vs $388.9M direct capital ($673.9M with 30% contingency)
 
 **Visual Elements**:
 - Waterfall chart: Springbok $279M + Brave Blossom $997M + synergy/deferral = $1,277M combined
@@ -401,7 +401,7 @@ The following figures are marked **[DRAFT]** and require confirmation once the w
 |-------|--------|---------------|-----------------|
 | Slide 2 | ~$185M net positive NPV (deferral vs capital) | Corrected — $508M deferral PV at 7% minus $322.9M capital PV at 8% | ✅ Confirmed |
 | Slide 2 | $180.3M (20%) closure reduction total | Corrected — 6 SMART targets from audit | Confirm once independent QS review completed |
-| Slide 3 | IRR ~52% | Corrected with capital schedule (was 77.4% with $0 capital) | ✅ Confirmed |
+| Slide 3 | IRR ~52% | Corrected with capital schedule (was the original cached value with $0 capital) | ✅ Confirmed |
 | Slide 3 | NPV $997M / $1,277M / $279M | Corrected with capital schedule (8% discount) | ✅ Confirmed |
 | Slide 3 | $389M capital (vs ~$525M with 35% contingency) | Concept estimate from vault file 07 | Must populate "Brave Blossom Capital" tab (currently blank — explicit deliverable) |
 | Slide 5 | ~$508M NPV of closure deferral | Corrected at 7%, 20yr per vault file 20 | ✅ Confirmed |
