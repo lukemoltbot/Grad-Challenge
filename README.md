@@ -8,15 +8,32 @@
 
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Repository Structure](#repository-structure)
-3. [Key Files](#key-files)
-4. [The Brief](#the-brief)
-5. [Analysis Process & Methodology](#analysis-process--methodology)
-6. [Excel Workbook Content](#excel-workbook-content)
-7. [Key Financial Figures](#key-financial-figures)
-8. [Deliverables Mapping](#deliverables-mapping)
-9. [Status](#status)
+1. [Start Here — Reading Guide](#start-here--reading-guide)
+2. [Overview](#overview)
+3. [Repository Structure](#repository-structure)
+4. [Key Files](#key-files)
+5. [The Brief](#the-brief)
+6. [Analysis Process & Methodology](#analysis-process--methodology)
+7. [Excel Workbook Content](#excel-workbook-content)
+8. [Key Financial Figures](#key-financial-figures)
+9. [Deliverables Mapping](#deliverables-mapping)
+10. [Status](#status)
+
+---
+
+## Start Here — Reading Guide
+
+**New to this project? Read these two documents first, in this order:**
+
+1. [`analysis/08_plain_english_evaluation.md`](analysis/08_plain_english_evaluation.md) — **Plain-English Evaluation & Recommendations**
+
+   Start here. This explains, in plain English, what each of the five options (A–E) means, what's good and bad about each, and why the team recommends what it recommends. No jargon, no spreadsheets — just clear reasoning. If you read only one document, read this one.
+
+2. [`PLAIN_ENGLISH_GUIDE.md`](PLAIN_ENGLISH_GUIDE.md) — **Plain English Guide: How We Reached Our Conclusions**
+
+   Read this second. This builds on the evaluation above and walks through *how* the conclusions were reached — the three big recommendations, how the financial numbers were calculated (NPV, IRR, capital), what the risks are, and what happens to the workers and the town. Includes a plain-English glossary of every acronym used in the project.
+
+After these two guides, the rest of this README and the `/analysis/` folder provide the full technical detail behind every figure and recommendation.
 
 ---
 
@@ -55,6 +72,7 @@ Grad-Challenge/
 ├── 2026_Graduate_Challenge_Brief.pdf      # Original 18-page challenge brief
 ├── TASK_LIST.md                             # Master task list (95 tasks across 8 workstreams)
 ├── README.md                                # This file
+├── PLAIN_ENGLISH_GUIDE.md                   # Plain English Guide: How We Reached Our Conclusions
 ├── vault/                                   # 23-file knowledge base (INDEX + 01–23)
 │   ├── INDEX.md
 │   ├── 01_Challenge_Overview.md
@@ -65,7 +83,7 @@ Grad-Challenge/
 │   ├── Complex_Valuation_Model.xlsx         # Original (15 sheets, as provided)
 │   ├── Complex_Valuation_Model_POPULATED.xlsx  # Populated with Brave Blossom capital schedule
 │   └── 2024_Springbok_Planned_Closure_Costs.xlsx  # $900M ERC closure cost model (6 sheets)
-├── analysis/                                # 8 analysis documents + Python scripts
+├── analysis/                                # 9 analysis documents + Python scripts
 │   ├── 01_workbook_audit.md
 │   ├── 01b_financial_model_analysis.md
 │   ├── 02_brave_blossom_swot.md
@@ -74,6 +92,7 @@ Grad-Challenge/
 │   ├── 05_recommendation_gonogo.md
 │   ├── 06_slide_structure_outline.md
 │   ├── 07_qa_preparation.md
+│   ├── 08_plain_english_evaluation.md        # Plain-English evaluation of all 5 options (START HERE)
 │   ├── _audit_*.py                          # Workbook audit scripts
 │   ├── _populate_capital.py                 # Populates Brave Blossom Capital tab
 │   └── _compute_npv_scenarios.py            # NPV/IRR scenario calculator
@@ -88,6 +107,13 @@ Grad-Challenge/
 ---
 
 ## Key Files
+
+### Plain-English Guides (Read These First)
+
+| File | Description |
+|------|-------------|
+| [`analysis/08_plain_english_evaluation.md`](analysis/08_plain_english_evaluation.md) | **Plain-English Evaluation & Recommendations** — Start here. Explains each of the five options (A–E) in plain English: what it is, what's good, what's bad, and why. No jargon, no spreadsheets. |
+| [`PLAIN_ENGLISH_GUIDE.md`](PLAIN_ENGLISH_GUIDE.md) | **Plain English Guide: How We Reached Our Conclusions** — Read second. Walks through how the recommendations were reached, how the financial numbers were calculated, what the risks are, and what happens to workers and the town. Includes a plain-English glossary of all acronyms. |
 
 ### Brief & Planning
 
@@ -125,6 +151,7 @@ The vault is a 23-file structured knowledge base that decomposes the brief into 
 | [`analysis/05_recommendation_gonogo.md`](analysis/05_recommendation_gonogo.md) | 361 | Do-nothing scenario, 3 recommendations with cashflow + risks, timeline |
 | [`analysis/06_slide_structure_outline.md`](analysis/06_slide_structure_outline.md) | 564 | 14-slide outline (900s total) + 6 appendix slides, timing, speaker notes |
 | [`analysis/07_qa_preparation.md`](analysis/07_qa_preparation.md) | 527 | 64 board questions, 10 model answers, 8 hostile question prep, solo presenter framework |
+| [`analysis/08_plain_english_evaluation.md`](analysis/08_plain_english_evaluation.md) | 434 | Plain-English evaluation of all 5 options (A–E): what each means, pros/cons, and why. No jargon. **Start here.** |
 
 ### Excel Workbooks
 
