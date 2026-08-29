@@ -234,9 +234,10 @@ Tasks: 2.1–2.2 (finalise narratives), 5.2 (finalise recommendations), 6.2–6.
 
 ## TRACKING
 
-- **Total tasks**: 71
-- ✅ READY (start now): 42
-- 🟡 DRAFT-READY (draft now, finalise later): 15
-- 🔴 BLOCKED (need workbooks/info): 14
+- **Total tasks**: 95
+- ✅ READY (start now): 52
+- 🟡 DRAFT-READY (draft now, finalise later): 19
+- 🔴 BLOCKED (need workbooks/info): 23
+- ✅ DONE: 1
 
 *Last updated: 2026-08-29*
