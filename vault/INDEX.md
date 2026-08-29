@@ -31,6 +31,7 @@
 | 20 | `20_Vault_Crossrefs_and_SMART.md` | Cross-references to files 05/07/08/09/12/13/14/15/16 + 6 quantified SMART cost-reduction targets (~$162M, 18%) + NPV of Brave Blossom deferral ($495M) |
 | 21 | `21_Complex_Valuation_Model.md` | Full analysis of the Complex Valuation Model workbook — 16 sheets, 3 mining scenarios (Springbok NPV $279M, Brave Blossom NPV $1,320M, combined $1,670M), carbon pricing, decommissioned mine CH₄ emissions, capital schedules, historical data |
 | 22 | `22_Requirements_and_Deliverables_Outline.md` | Master reference — consolidated requirements & deliverables from all 21 vault files: scenario, tasks, presentation structure, SWOT areas, SMART targets, financial models, key numbers, gaps, timeline, cross-ref map |
+| 23 | `23_Phase1_Outputs.md` | Phase 1 handoff for new session: 8 analysis docs summary, corrected NPV figures ($997M/$1,277M), Phase 2 task list, verification status |
 
 ## Summary
 
