@@ -121,10 +121,10 @@ The vault is a 23-file structured knowledge base that decomposes the brief into 
 | [`analysis/01b_financial_model_analysis.md`](analysis/01b_financial_model_analysis.md) | 350 | NPV/IRR scenarios with populated capital schedule. Corrected NPV: $997M base case. Sensitivity analysis, DCF dashboard. |
 | [`analysis/02_brave_blossom_swot.md`](analysis/02_brave_blossom_swot.md) | 344 | 11-area SWOT + valuation narrative + $389M capital review + 1:2.31 capital-to-liability ratio |
 | [`analysis/03_closure_liability_review.md`](analysis/03_closure_liability_review.md) | 511 | $900M review, 8 anomalies, 6 SMART targets with compliance checks, cashflow/risk analysis |
-| [`analysis/04_other_projects_and_workplan.md`](analysis/04_other_projects_and_workplan.md) | 786 | Brumby/Bronco/Option E SWOTs, cross-option matrix A–E, stage-gated workplan (2027–2033) |
-| [`analysis/05_recommendation_gonogo.md`](analysis/05_recommendation_gonogo.md) | 360 | Do-nothing scenario, 3 recommendations with cashflow + risks, timeline |
+| [`analysis/04_other_projects_and_workplan.md`](analysis/04_other_projects_and_workplan.md) | 787 | Brumby/Bronco/Option E SWOTs, cross-option matrix A–E, stage-gated workplan (2027–2033) |
+| [`analysis/05_recommendation_gonogo.md`](analysis/05_recommendation_gonogo.md) | 361 | Do-nothing scenario, 3 recommendations with cashflow + risks, timeline |
 | [`analysis/06_slide_structure_outline.md`](analysis/06_slide_structure_outline.md) | 564 | 14-slide outline (900s total) + 6 appendix slides, timing, speaker notes |
-| [`analysis/07_qa_preparation.md`](analysis/07_qa_preparation.md) | 528 | 64 board questions, 10 model answers, 8 hostile question prep, solo presenter framework |
+| [`analysis/07_qa_preparation.md`](analysis/07_qa_preparation.md) | 527 | 64 board questions, 10 model answers, 8 hostile question prep, solo presenter framework |
 
 ### Excel Workbooks
 
@@ -329,7 +329,7 @@ How each deliverable from the brief maps to files in this repository:
 
 | Phase | Status | Description |
 |-------|--------|-------------|
-| **Phase 1 — Analysis** | ✅ Complete | 8 analysis documents (3,993 lines) + populated workbook. 92/92 verification checks pass. |
+| **Phase 1 — Analysis** | ✅ Complete | 8 analysis documents (3,994 lines) + populated workbook. 92/92 verification checks pass. |
 | **Phase 2 — Assembly** | ✅ Complete | PPTX + HTML decks (20 slides each), speaker notes, Q&A finalised. 55/55 verification checks pass. |
 | **Phase 3 — Rehearsal** | Ready | All content complete. In-person timing rehearsal only remaining step. |
 
