@@ -66,11 +66,11 @@ The team didn't just look at Brave Blossom. They evaluated five options total:
 
 | Option | What It Is | Decision | Why |
 |--------|-----------|----------|-----|
-| **A — Brave Blossom (full go)** | Spend $389M, get 20 years of revenue | ✅ **Recommended** (but staged) | Best financial return, defers cleanup bill |
-| **B — Do nothing (no-go)** | Spend $0, earn $0, pay $900M cleanup | ❌ **Rejected** | Destroys value — $900M bill with no income to pay it |
-| **C — Phased approach** | Spend $20M on studies first, decide later | ✅ **Incorporated into Option A** | The stage-gate approach IS the recommendation |
-| **D — Buy Bronco's mine** | Acquire the neighbouring lease | 👁️ **Monitor** | Bronco has rejected all previous offers; keep watching |
-| **E — Explore for new deposits** | Spend $5–10M on exploration | 📌 **Parallel workstream only** | Too slow — revenue wouldn't come until after 2052 |
+| **Option A — Brave Blossom (full go)** | Spend $389M, get 20 years of revenue | ✅ **Recommended** (but staged) | Best financial return, defers cleanup bill |
+| **Option B — Do nothing (no-go)** | Spend $0, earn $0, pay $900M cleanup | ❌ **Rejected** | Destroys value — $900M bill with no income to pay it |
+| **Option C — Phased approach** | Spend $20M on studies first, decide later | ✅ **Incorporated into Option A** | The stage-gate approach IS the recommendation |
+| **Option D — Buy Bronco's mine** | Acquire the neighbouring lease | 👁️ **Monitor** | Bronco has rejected all previous offers; keep watching |
+| **Option E — Explore for new deposits** | Spend $5–10M on exploration | 📌 **Parallel workstream only** | Too slow — revenue wouldn't come until after 2052 |
 
 There's also a sixth project called **Brumby** — a potential open-cut mine 25km away. It could provide a "bridge" of income between Springbok closing (2031) and Brave Blossom starting (2033). But there isn't enough data yet (no confirmed coal quantity, no cost estimate), so the team recommends spending $5–8 million on a pre-feasibility study first.
 
