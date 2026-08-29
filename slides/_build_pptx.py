@@ -565,32 +565,29 @@ asks = ["1. Approve $20M studies funding for 2027-2028 (Gate 1 decision end 2028
 for i, ask in enumerate(asks):
     add_text_box(slide, Inches(2.0), Inches(4.4 + i * 0.4), Inches(9.5), Inches(0.35), ask, font_size=13, color=WHITE)
 add_rect(slide, Inches(1.5), Inches(6.2), Inches(10.3), Inches(0.6), RGBColor(0x1A, 0x2A, 0x4D))
-add_text_box(slide, Inches(1.8), Inches(6.25), Inches(9.7), Inches(0.5), "Appendix slides A1-A6 available for Q&A deep-dives  |  We welcome your questions", font_size=14, color=ACCENT_GOLD, align=PP_ALIGN.CENTER)
+add_text_box(slide, Inches(1.8), Inches(6.25), Inches(9.7), Inches(0.5), "Appendix slides A1-A8 available for Q&A deep-dives  |  We welcome your questions", font_size=14, color=ACCENT_GOLD, align=PP_ALIGN.CENTER)
 add_speaker_notes(slide, "[60s] To summarise: we recommend proceeding with Brave Blossom through stage gates, reducing closure liability by $180.3 million, and implementing carbon abatement. Combined NPV is $1.28 billion. We ask the board to approve $20 million in studies funding, endorse the closure reduction program, and support carbon abatement design. We welcome your questions.")
 
-# ══ APPENDIX A1 — Full SWOT ══
+# ══ APPENDIX A1 — Full SWOT: Brave Blossom (11 Areas, S/W/O/T) ══
 slide = prs.slides.add_slide(prs.slide_layouts[6])
 add_bg(slide, WHITE)
-add_header_bar(slide, "A1", "APPENDIX", "Full Brave Blossom SWOT — All 11 Areas", MID_GRAY)
-swot_areas = [
-    ("1. Mine plan & coal quality", "S: 20yr life, known measures", "W: 12% quality discount, CHPP yield 68%"),
-    ("2. Infrastructure", "S: Leverages existing CHPP/rail/port", "W: CHPP end-of-life 2032, $24M EPCM"),
-    ("3. Equipment suitability", "S: Longwall transferable from Springbok", "W: Long lead time 18-24 months"),
-    ("4. Geological / geotechnical", "S: Same Blackwater Group stratigraphy", "W: Monocline, faulting, historic roof falls"),
-    ("5. Approvals / environmental", "S: 75% within ML (state approved)", "W: 25% on MDL (federal DCCEEW)"),
-    ("6. Carbon liability", "S: Gas drainage infra exists (dual-purpose)", "W: 20.1M tCO2e above baseline (20yr)"),
-    ("7. Deliverability / complexity", "S: Stage-gated reduces execution risk", "W: 6-year development window"),
-    ("8. Financial implications", "S: NPV $997M, IRR ~52%, all scenarios +", "W: Peak capital $221M in 2032 (gap)"),
-    ("9. Labour supply", "S: 800 staff, skills transferable", "W: 2 competing mines from 2028"),
-    ("10. People / change mgmt", "S: 20yr job security vs contract labour", "W: 2yr gap (2031-33), roster changes"),
-    ("11. Other board considerations", "S: Community social licence maintained", "W: ESG investor sentiment, market perception"),
+add_header_bar(slide, "A1", "APPENDIX", "Brave Blossom SWOT — All 11 Areas (S/W/O/T)", MID_GRAY)
+swot_a1_h = ["Area", "Strengths", "Weaknesses", "Opportunities", "Threats"]
+swot_a1_r = [
+    ["1. Mine plan & coal quality", "20yr life, 142Mt ROM, known Blackwater measures", "12% quality discount, yield 68%, realised $211/t", "PFS may improve quality; stage-gated go/no-go", "Market decline; quality may worsen"],
+    ["2. Infrastructure", "Leverages existing CHPP/rail/port, 4→6 mtpa", "CHPP end-of-life 2032, $24M EPCM", "CHPP repurposing; shared infra with Brumby", "Rail capacity lost if 2028 renewal missed"],
+    ["3. Equipment suitability", "Longwall transferable from Springbok", "18-24mo lead time, $190M longwall", "New equipment attracts workforce", "Cost escalation +30%; supply chain delays"],
+    ["4. Geological / geotechnical", "Same Blackwater Group stratigraphy", "Monocline, faulting, historic roof falls", "3D seismic + modelling de-risks", "Unforeseen conditions in historic workings"],
+    ["5. Approvals / environmental", "75% within ML (state approved)", "25% on MDL (federal DCCEEW uncertain)", "Early engagement; fallback 75% = 15yr life", "Federal delay beyond 2030 threatens 2033 coal"],
+    ["6. Carbon liability", "Gas drainage infra exists (dual-purpose)", "20.1M tCO2e above baseline; $200M+ cost", "Methane capture → ACCU revenue + gas sales", "Carbon price may exceed modelled; reforms 2027"],
+    ["7. Deliverability / complexity", "Stage-gated (3 gates), Stage 1 only $20M", "6yr dev window, limited float, concurrent closure", "Go/no-go at each gate; tech advances", "Must start 2027; delays cascade"],
+    ["8. Financial implications", "NPV $997M, IRR ~52%, all scenarios positive", "$389M capital, peak $221M in 2032", "Stage-gated limits initial to $20M; DCF +ve 2032", "Price decline; capital escalation; carbon may exceed"],
+    ["9. Labour supply", "~800 staff, skills transferable from Springbok", "Owner/contractor unresolved; 2yr gap 2031-33", "Owner-op enables long-term skills development", "Competing mines from 2028; workforce dispersion"],
+    ["10. People / change mgmt", "20yr job security, 505 houses retained", "Change mgmt complexity; H&S risk in re-entry", "Community engagement; training as investment", "Media backlash precedent; expectations if cancelled"],
+    ["11. Other board considerations", "Social licence; JV customers; $1:$2.31 cap:liability", "Federal approval binary; JV governance", "Future targets; Bronco acquisition; ACCU revenue", "ESG divestment; regulatory tightening; political risk"],
 ]
-for i, (area, s, w) in enumerate(swot_areas):
-    y = Inches(1.0 + i * 0.55)
-    add_text_box(slide, Inches(0.5), y, Inches(2.8), Inches(0.5), area, font_size=10, bold=True, color=DARK_NAVY)
-    add_text_box(slide, Inches(3.5), y, Inches(4.5), Inches(0.5), s, font_size=10, color=ACCENT_GREEN)
-    add_text_box(slide, Inches(8.2), y, Inches(4.8), Inches(0.5), w, font_size=10, color=ACCENT_AMBER)
-add_speaker_notes(slide, "Appendix for Q&A. Full 11-area SWOT from analysis file 02.")
+add_table(slide, Inches(0.3), Inches(1.0), Inches(12.7), Inches(5.5), swot_a1_h, swot_a1_r, col_widths=[Inches(2.3), Inches(2.6), Inches(2.6), Inches(2.6), Inches(2.6)], font_size=8)
+add_speaker_notes(slide, "Appendix for Q&A. Full 11-area SWOT with S/W/O/T for Brave Blossom (Option A) from analysis file 02.")
 
 # ══ APPENDIX A2 — Workbook Audit ══
 slide = prs.slides.add_slide(prs.slide_layouts[6])
@@ -635,75 +632,94 @@ add_table(slide, Inches(0.5), Inches(1.0), Inches(12.3), Inches(5.0), cap_header
 add_text_box(slide, Inches(0.5), Inches(6.2), Inches(12.3), Inches(0.4), "With 30% contingency: $673.9M total  |  Peak year 2032: $221M (longwall delivery)  |  Source: vault file 07 / analysis file 01b", font_size=11, color=MID_GRAY)
 add_speaker_notes(slide, "Appendix for Q&A. Full capital breakdown by year and category.")
 
-# ══ APPENDIX A4 — Brumby & Bronco SWOT ══
+# ══ APPENDIX A4 — Full SWOT: Brumby Open Cut (11 Areas, S/W/O/T) ══
 slide = prs.slides.add_slide(prs.slide_layouts[6])
 add_bg(slide, WHITE)
-add_header_bar(slide, "A4", "APPENDIX", "Brumby & Bronco SWOT (11 Areas)", MID_GRAY)
-add_text_box(slide, Inches(0.5), Inches(1.0), Inches(5.5), Inches(0.4), "Brumby Open Cut (Xanadu seam)", font_size=16, bold=True, color=ACCENT_BLUE)
-brumby_swot = [
-    ("S: Known geological analog, low strip ratio", "W: No resource tonnage data"),
-    ("S: Cashflow bridge 2031-2033 gap", "W: No capital estimate"),
-    ("S: Lower capital than BB", "W: Tenement status unconfirmed"),
-    ("S: 70/30 GCN/PHCC product mix", "W: GCN thermal coal (market risk)"),
-    ("O: PFS funding $5-8M", "T: 25km from existing infra"),
-    ("O: Extension of known seam", "T: Open cut approval complexity"),
-    ("O: Uses existing CHPP (if extended)", "T: Competing land use"),
+add_header_bar(slide, "A4", "APPENDIX", "Brumby Open Cut SWOT — All 11 Areas (S/W/O/T)", MID_GRAY)
+swot_a4_h = ["Area", "Strengths", "Weaknesses", "Opportunities", "Threats"]
+swot_a4_r = [
+    ["1. Mine plan & coal quality", "Low strip ratio (4.5-4.9 bcm/t), GCN 6,212-6,290 kcal/kg", "70% thermal mix, no Xanadu quality data", "PFS may reveal thicker/better seam", "Thermal coal structural decline; ESG divestment"],
+    ["2. Infrastructure", "Lower complexity than UG (no shafts/vent)", "25km from CHPP; no existing infra", "Standalone dry plant for regional projects", "25km haul adds $5-10/t; standalone CHPP $50M+"],
+    ["3. Equipment suitability", "Standard OC equipment available; contract mining viable", "No existing fleet; Springbok is UG-only", "Autonomous haulage from inception; electric trucks", "Cost escalation 20-30%; 12-18mo lead times"],
+    ["4. Geological / geotechnical", "Lower risk than UG; no monocline/faulting", "Resource tonnage unknown; seam unconfirmed", "Exploration may find additional seams", "Seam thinner/deeper/lower quality than expected"],
+    ["5. Approvals / environmental", "Standard EA/ML process if tenement held", "New OC faces strong scrutiny; 2-4yr process", "Progressive rehab; void repurposing", "Environmental opposition; native title claims"],
+    ["6. Carbon liability", "Lower absolute emissions (small scale)", "No gas capture for OC; Safeguard triggered", "Reforestation ACCUs; may stay under threshold", "Carbon tax reforms 2027; no abatement pathway"],
+    ["7. Deliverability / complexity", "Less complex than UG longwall; faster ramp", "Tenement status uncertain; may need acquisition", "Combined with Bronco = 3-4 Mtpa hub", "Tenement negotiation adds 1-3yr; Bronco may refuse"],
+    ["8. Financial implications", "Lower capital than BB (~$150-250M assumed)", "No capital estimate, no resource tonnage, no NPV", "Lower entry point; thermal upside if Asian demand", "Revenue insufficient for standalone; competes with BB"],
+    ["9. Labour supply", "1.5 Mtpa suits contract mining; Springbok redeployable", "UG workforce needs retraining; rates escalating", "Cross-skilling enhances workforce resilience", "Tight labour market; 2× new entrants from 2028"],
+    ["10. People / change mgmt", "Minimal housing/roster change from Dustyroo Flats", "25km commute; roster patterns differ from UG", "Extends employment beyond 2031; transition pathway", "Community expectations if ops move to Brumby site"],
+    ["11. Other board considerations", "Strategic hedge against BB failure; product diversification", "Concept stage only; competes for capital", "Positions WM for future M&A; attractive partner", "ESG investors view new thermal coal negatively"],
 ]
-for i, (s, w) in enumerate(brumby_swot):
-    y = Inches(1.5 + i * 0.45)
-    add_text_box(slide, Inches(0.5), y, Inches(2.75), Inches(0.4), s, font_size=10, color=ACCENT_GREEN)
-    add_text_box(slide, Inches(3.3), y, Inches(2.75), Inches(0.4), w, font_size=10, color=ACCENT_RED)
-add_text_box(slide, Inches(6.8), Inches(1.0), Inches(5.5), Inches(0.4), "Bronco Acquisition (Option D)", font_size=16, bold=True, color=ACCENT_AMBER)
-bronco_swot = [
-    ("S: Resource extends from Springbok seam", "W: No resource/quality data"),
-    ("S: Adjacent lease (ML1654)", "W: Repeatedly rejected approaches"),
-    ("S: Potential synergies with Springbok", "W: Unknown capital requirement"),
-    ("S: Maintains workforce continuity", "W: Valuation expectations unknown"),
-    ("O: Monitor financial position", "T: Acquisition premium risk"),
-    ("O: Dual-track with Brumby PFS", "T: Due diligence access limited"),
-    ("O: Future sale may force opportunity", "T: Integration complexity"),
-]
-for i, (s, w) in enumerate(bronco_swot):
-    y = Inches(1.5 + i * 0.45)
-    add_text_box(slide, Inches(6.8), y, Inches(2.75), Inches(0.4), s, font_size=10, color=ACCENT_GREEN)
-    add_text_box(slide, Inches(9.6), y, Inches(2.75), Inches(0.4), w, font_size=10, color=ACCENT_RED)
-add_speaker_notes(slide, "Appendix for Q&A. Detailed SWOT for alternative projects.")
+add_table(slide, Inches(0.3), Inches(1.0), Inches(12.7), Inches(5.5), swot_a4_h, swot_a4_r, col_widths=[Inches(2.3), Inches(2.6), Inches(2.6), Inches(2.6), Inches(2.6)], font_size=8)
+add_speaker_notes(slide, "Appendix for Q&A. Full 11-area SWOT for Brumby Open Cut (Option C) from analysis file 04. Concept-stage — requires PFS validation.")
 
-# ══ APPENDIX A5 — No-Go Deep-Dive ══
+# ══ APPENDIX A5 — Full SWOT: Bronco Acquisition (11 Areas, S/W/O/T) ══
 slide = prs.slides.add_slide(prs.slide_layouts[6])
 add_bg(slide, WHITE)
-add_header_bar(slide, "A5", "APPENDIX", "No-Go Scenario Deep-Dive (Option B)", MID_GRAY)
-add_rect(slide, Inches(0.5), Inches(1.0), Inches(5.8), Inches(2.8), RGBColor(0xFD, 0xEC, 0xEA))
-add_text_box(slide, Inches(0.7), Inches(1.1), Inches(5.4), Inches(0.3), "Financial Consequences", font_size=14, bold=True, color=ACCENT_RED)
-add_multi_text(slide, Inches(0.7), Inches(1.5), Inches(5.4), Inches(2.3), [
-    ("$900M closure due 2031-2050 (no revenue offset)", True, 12, ACCENT_RED),
-    ("$0 revenue post-2031 (Springbok ceases Q4 2031)", True, 12, ACCENT_RED),
-    ("Full $900M outflow with no offsetting revenue", False, 12),
-    ("CHPP, infrastructure, TLO written off at cessation", False, 12),
-    ("20-year unmanaged carbon liability (4.68M tCO2e)", False, 12),
-    ("Net cash position 2031-2050: deeply negative", False, 12),
-], font_size=12)
-add_rect(slide, Inches(6.5), Inches(1.0), Inches(6.3), Inches(2.8), RGBColor(0xFD, 0xEC, 0xEA))
-add_text_box(slide, Inches(6.7), Inches(1.1), Inches(5.9), Inches(0.3), "Workforce & Community", font_size=14, bold=True, color=ACCENT_RED)
-add_multi_text(slide, Inches(6.7), Inches(1.5), Inches(5.9), Inches(2.3), [
-    ("800+ jobs lost at cessation (Q4 2031)", True, 12, ACCENT_RED),
-    ("Dustyroo Flats economic collapse", True, 12, ACCENT_RED),
-    ("Competing mine precedent: media backlash", False, 12),
-    ("Supplier chain collapse (diversification happening)", False, 12),
-    ("Workforce dispersal — cannot rebuild for future", False, 12),
-    ("Native title holder relations if closure mismanaged", False, 12),
-], font_size=12)
-add_rect(slide, Inches(0.5), Inches(4.0), Inches(12.3), Inches(2.5), LIGHT_BG)
-add_text_box(slide, Inches(0.7), Inches(4.1), Inches(11.9), Inches(0.3), "NPV Comparison: Go vs No-Go", font_size=14, bold=True, color=DARK_NAVY)
-npv_headers = ["Scenario", "NPV ($M)", "Revenue", "Closure Impact", "Verdict"]
-npv_rows = [["Go (stage-gated)", "1,277", "$1,652M p.a. (2033-2048)", "$900M deferred to post-2052", "Value creation"], ["No-Go (Option B)", "279 (Springbok only)", "$0 post-2031", "$900M due 2031-2050", "Value destruction"]]
-add_table(slide, Inches(0.7), Inches(4.5), Inches(11.9), Inches(1.5), npv_headers, npv_rows, col_widths=[Inches(2.5), Inches(2.0), Inches(3.0), Inches(2.7), Inches(1.7)], font_size=11)
-add_speaker_notes(slide, "Appendix for Q&A. Substantiates the explicit no-go analysis per brief tip #3.")
+add_header_bar(slide, "A5", "APPENDIX", "Bronco Acquisition SWOT — All 11 Areas (S/W/O/T)", MID_GRAY)
+swot_a5_h = ["Area", "Strengths", "Weaknesses", "Opportunities", "Threats"]
+swot_a5_r = [
+    ["1. Mine plan & coal quality", "Resource 'similar to historic Brumby' — known benchmark", "No resource tonnage or quality data; no JORC", "Drilling may reveal larger/better resources", "May be smaller/lower quality; thermal-heavy mix"],
+    ["2. Infrastructure", "Adjacent to Springbok ML; leverage existing CHPP/rail", "CHPP end-of-life 2032; Bronco infra unknown", "Combined CHPP optimisation; 4Mt spare capacity", "CHPP capital coincides with acquisition timing"],
+    ["3. Equipment suitability", "Existing Bronco fleet may transfer; standard OC equip", "Equipment age/condition unknown; may need replacement", "Fleet optimisation across multiple OCs", "Equipment at end of life; leases may not transfer"],
+    ["4. Geological / geotechnical", "Continuation of Springbok coal measures; well-understood", "No WM drilling data in ML1654; northern geology unknown", "Springbok geological model extends to boundary", "Faulting/intrusions/thinning in northern portion"],
+    ["5. Approvals / environmental", "ML1654 already granted; EA in place; no greenfield process", "Expansion beyond current EA may trigger assessment", "Amending EA faster than new; progressive rehab", "Historic disturbances carry transferable rehab liability"],
+    ["6. Carbon liability", "Small-scale; emissions may be near/below Safeguard threshold", "No gas capture for OC; higher fugitive intensity", "Reforestation on rehab land; ACCUs", "Carbon price trajectory; no abatement; Safeguard rising"],
+    ["7. Deliverability / complexity", "OC lower complexity; existing operation could continue", "Bronco rejected all approaches; negotiation complex", "Bronco financial struggles may force sale; royalty model", "Bronco may continue refusing; hostile seller limits DD"],
+    ["8. Financial implications", "Revenue starts immediately if going concern; lower cap than BB", "Acquisition price unknown; no resource → no NPV", "Combined OC+UG optimises cashflow; funds BB dev", "Overpay risk; short mine life; rehab liabilities inherited"],
+    ["9. Labour supply", "Existing Bronco workforce may transfer; proximity allows sharing", "Workforce composition unknown; culture clash risk", "Integrated workforce for Brumby+Bronco operations", "Retention uncertain; contractor misalignment"],
+    ["10. People / change mgmt", "Preserves jobs at Bronco; community positive narrative", "Integration challenges; different systems/standards", "Combined ops strengthen Dustyroo Flats economy", "Community perception of consolidation; increased activity"],
+    ["11. Other board considerations", "Complementary to BB; eliminates northern boundary risk", "Inherits rehab liabilities; ESG concerns with thermal coal", "Strategic control; regional consolidation; resolves Brumby", "OC faces stronger opposition; higher carbon intensity"],
+]
+add_table(slide, Inches(0.3), Inches(1.0), Inches(12.7), Inches(5.5), swot_a5_h, swot_a5_r, col_widths=[Inches(2.3), Inches(2.6), Inches(2.6), Inches(2.6), Inches(2.6)], font_size=8)
+add_speaker_notes(slide, "Appendix for Q&A. Full 11-area SWOT for Bronco Acquisition (Option D) from analysis file 04. Strategic optionality — monitor and maintain relationship.")
+
+# ══ APPENDIX A6 — Full SWOT: Future Exploration / Option E (11 Areas, S/W/O/T) ══
+slide = prs.slides.add_slide(prs.slide_layouts[6])
+add_bg(slide, WHITE)
+add_header_bar(slide, "A6", "APPENDIX", "Future Exploration (Option E) SWOT — All 11 Areas", MID_GRAY)
+swot_a6_h = ["Area", "Strengths", "Weaknesses", "Opportunities", "Threats"]
+swot_a6_r = [
+    ["1. Mine plan & coal quality", "Freedom to target best-quality coal; historic targets exist", "No defined resource; everything speculative", "May find higher-quality pure HCC (no thermal)", "May not find viable coal; best targets already held"],
+    ["2. Infrastructure", "No infra required during exploration (drilling only)", "No existing infra; greenfield dev $500M+", "New project designed with modern efficient infra", "Greenfield infra costs more than extending Springbok"],
+    ["3. Equipment suitability", "Exploration equipment standard and low-cost", "Full fleet procurement from scratch when project found", "Latest technology from inception (autonomous, electric)", "Equipment costs may escalate further by 2040s"],
+    ["4. Geological / geotechnical", "Bowen Basin well-understood; regional data available", "Greenfield high risk; 10-30% target-to-resource rate", "3D seismic + advanced modelling de-risks", "Complex geology possible in unexplored areas"],
+    ["5. Approvals / environmental", "Exploration permits straightforward; minimal impact", "Future mine requires full approvals — 3-5yr minimum", "Low-carbon progressive-rehab mine may fast-track", "Regulatory environment prohibitive for new coal by 2040+"],
+    ["6. Carbon liability", "No operational carbon liability during exploration", "Future mine faces $120-200/t carbon; Scope 3 regulated", "Designed from inception with abatement; near-zero net", "Carbon prices may make new coal mines unviable by 2040+"],
+    ["7. Deliverability / complexity", "Exploration programs straightforward; low mgmt complexity", "10-16yr lead time: exploration→PFS→approvals→dev", "Can partner with exploration companies; parallel to closure", "20+yr means multiple mgmt cycles; continuity risk"],
+    ["8. Financial implications", "Lowest capital — $5-10M exploration only", "$900M closure due 2031-50 with no revenue; NPV negative", "Major resource found at exploration cost vs acquisition $100Ms", "May yield nothing; WM may not survive 20yr zero-revenue"],
+    ["9. Labour supply", "Small exploration workforce readily available", "Complete loss of 800+ Springbok mining workforce by 2031", "Future project designed for optimal workforce model", "Cannot rebuild skilled workforce after 20yr gap"],
+    ["10. People / change mgmt", "Minimal workforce impact during exploration", "Severe community impact — Dustyroo Flats collapse; 800+ jobs lost", "Future mine with community co-design; next generation", "Town may not exist by 2040+; community trust destroyed"],
+    ["11. Other board considerations", "Maintains WM pipeline; low-regret activity", "Abandoning mining business for 20+yr; board patience unlikely", "May identify non-coal resources; diversifies portfolio", "WM may not survive as independent entity; wind-up risk"],
+]
+add_table(slide, Inches(0.3), Inches(1.0), Inches(12.7), Inches(5.5), swot_a6_h, swot_a6_r, col_widths=[Inches(2.3), Inches(2.6), Inches(2.6), Inches(2.6), Inches(2.6)], font_size=8)
+add_speaker_notes(slide, "Appendix for Q&A. Full 11-area SWOT for Future Exploration (Option E) from analysis file 04. Not recommended as standalone — parallel workstream only.")
+
+# ══ APPENDIX A7 — Full SWOT: No-Go / Do Nothing (11 Areas, S/W/O/T) ══
+slide = prs.slides.add_slide(prs.slide_layouts[6])
+add_bg(slide, WHITE)
+add_header_bar(slide, "A7", "APPENDIX", "No-Go Scenario SWOT — All 11 Areas (S/W/O/T)", MID_GRAY)
+swot_a7_h = ["Area", "Strengths", "Weaknesses", "Opportunities", "Threats"]
+swot_a7_r = [
+    ["1. Mine plan & coal quality", "No mine plan needed — cessation only", "No coal extracted; resource sterilised", "Resource remains for future recovery", "Resource may become stranded asset"],
+    ["2. Infrastructure", "No infrastructure development needed", "CHPP, TLO, rail contracts written off at cessation", "Infra repurposing (pit void, logistics hub)", "Infra deteriorates during 20yr idle period"],
+    ["3. Equipment suitability", "No equipment procurement required", "Existing fleet decommissioned/sold at distressed values", "Equipment sale generates some cash", "Replacement cost if resuming operations later"],
+    ["4. Geological / geotechnical", "No geotechnical risk (no mining)", "Sealed workings degrade; historic workings inaccessible", "N/A — no mining activity", "Subsidence from historic workings; groundwater ingress"],
+    ["5. Approvals / environmental", "No approval risk; no new approvals needed", "Relinquishment target 2050; ongoing compliance", "Progressive rehab acceleration; early relinquishment", "Regulatory penalties if rehab standards not met"],
+    ["6. Carbon liability", "No operational emissions (mine ceased)", "4.68M tCO2e decommissioned emissions over 20yr (no mitigation)", "Reforestation ACCUs on rehabilitated land", "Safeguard Mechanism on decommissioned emissions; 20yr unmanaged"],
+    ["7. Deliverability / complexity", "Simplest execution path — cessation and rehab only", "$900M closure due 2031-2050 with no revenue offset", "Cost optimisation — audit found $162-180M savings", "Closure execution risk; $900M outflow with no revenue buffer"],
+    ["8. Financial implications", "Zero additional capital; no project execution risk", "$0 revenue post-2031; Springbok NPV only $279M", "Rehab cost optimisation ($180M savings per audit)", "Shareholder value destruction; going concern risk"],
+    ["9. Labour supply", "No labour required for mining", "800+ jobs lost at cessation; skills permanently dispersed", "Workforce transition to closure/rehab roles (limited)", "Cannot rebuild workforce for future; skills permanently lost"],
+    ["10. People / change mgmt", "Clear timeline (cessation Q4 2031, relinquishment 2050)", "Dustyroo Flats economic collapse; community disintegration", "Workforce transition programs; community diversification", "Media backlash (competing mine precedent); native title issues"],
+    ["11. Other board considerations", "No project execution risk; straightforward governance", "WM becomes closure management company; strategic atrophy", "All mitigants available under Recommendations 1-3", "Supplier chain collapse; WM may not survive as going concern"],
+]
+add_table(slide, Inches(0.3), Inches(1.0), Inches(12.7), Inches(5.5), swot_a7_h, swot_a7_r, col_widths=[Inches(2.3), Inches(2.6), Inches(2.6), Inches(2.6), Inches(2.6)], font_size=8)
+add_speaker_notes(slide, "Appendix for Q&A. Full 11-area SWOT for No-Go / Do Nothing (Option B) from analysis file 05. Rejected as standalone strategy — value destruction.")
 
 # ══ APPENDIX A6 — Carbon Detail ══
 slide = prs.slides.add_slide(prs.slide_layouts[6])
 add_bg(slide, WHITE)
-add_header_bar(slide, "A6", "APPENDIX", "Carbon Liability & Safeguard Mechanism Detail", MID_GRAY)
+add_header_bar(slide, "A8", "APPENDIX", "Carbon Liability & Safeguard Mechanism Detail", MID_GRAY)
 em_headers = ["Source", "tCO2e", "Period", "Above Baseline"]
 em_rows = [
     ["Springbok operational", "1.6M", "2027-2031 (5yr)", "Yes"],
@@ -740,5 +756,5 @@ output_path = "/Users/lukemoltbot/Grad-Challenge/slides/Wallaby_Mining_Board_Pre
 os.makedirs(os.path.dirname(output_path), exist_ok=True)
 prs.save(output_path)
 print(f"OK PPTX saved: {output_path}")
-print(f"Total slides: {len(prs.slides)} (14 main + 6 appendix)")
+print(f"Total slides: {len(prs.slides)} (14 main + 8 appendix)")
 print(f"File size: {os.path.getsize(output_path) / 1024:.1f} KB")
