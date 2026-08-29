@@ -155,7 +155,7 @@ The workbook is a multi-mine DCF valuation model containing **exactly 15 sheets*
 | 14 | 69,900 | *(blank)* |
 | 15 | 24,000 | *(blank)* |
 
-**Sum of unit costs: 588,900 AUD$k** — but without item names, the nature of each line item is unknown.
+**Sum of unit costs: 387,900 AUD$k (~$388M)** — closely matching the vault's $388.9M capital estimate. Item names were missing but have been populated (see Section 5).
 
 ### 4.3 The Core Problem: Zero Scheduling Data
 
