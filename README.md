@@ -21,14 +21,15 @@
 1. [Start Here — Reading Guide](#start-here--reading-guide)
 2. [Overview](#overview)
 3. [Repository Structure](#repository-structure)
-4. [Key Files](#key-files)
-5. [The Brief](#the-brief)
-6. [Analysis Process & Methodology](#analysis-process--methodology)
-7. [Excel Workbook Content](#excel-workbook-content)
-8. [Key Financial Figures](#key-financial-figures)
-9. [Deliverables Mapping](#deliverables-mapping)
-10. [Status](#status)
-11. [Calculation Walkthroughs](#calculation-walkthroughs)
+4. [Complete Repository Contents — Every File Explained](#complete-repository-contents--every-file-explained)
+5. [Key Files](#key-files)
+6. [The Brief](#the-brief)
+7. [Analysis Process & Methodology](#analysis-process--methodology)
+8. [Excel Workbook Content](#excel-workbook-content)
+9. [Key Financial Figures](#key-financial-figures)
+10. [Deliverables Mapping](#deliverables-mapping)
+11. [Status](#status)
+12. [Calculation Walkthroughs](#calculation-walkthroughs)
 
 ---
 
@@ -124,6 +125,95 @@ Grad-Challenge/
 │   └── _build_pptx.py                           # PPTX build script
 └── verify_phase2.py                         # 55-check verification suite
 ```
+
+---
+
+## Complete Repository Contents — Every File Explained
+
+> Every file in this repository, grouped by directory, with a one-line purpose so you know what each document is for before opening it. Use `Ctrl+F` to search for a filename or keyword.
+
+### Root Directory (`/`)
+
+| File | Purpose |
+|------|---------|
+| [`README.md`](README.md) | **This file.** Project overview, reading guide, methodology, financial figures, and complete file index. Start here. |
+| [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md) | **Executive summary** — the entire project distilled to one page. The situation, the five options, the three recommendations, key financials, risks, timeline, and bottom line. If you have 2 minutes, read this. |
+| [`PLAIN_ENGLISH_GUIDE.md`](PLAIN_ENGLISH_GUIDE.md) | **Plain English Guide: How We Reached Our Conclusions.** Walks through the three recommendations, how the financial numbers were calculated (NPV, IRR, capital), what the risks are, and what happens to workers and the town. Includes a plain-English glossary of every acronym. Read after the executive summary. |
+| [`OPTION_A_CALCULATION_WALKTHROUGH.md`](OPTION_A_CALCULATION_WALKTHROUGH.md) | **Cell-by-cell DCF walkthrough for Brave Blossom (Option A).** Explains every financial term (discount rate, NPV, IRR, tax shield, carbon liability) with exact workbook cell references. Shows how revenue, costs, capital, and cashflow combine to produce the corrected **$997M NPV** (~52% IRR). 826 lines. Open the Excel workbook alongside this guide and follow the live formulas. |
+| [`OPTION_C_CALCULATION_WALKTHROUGH.md`](OPTION_C_CALCULATION_WALKTHROUGH.md) | **Stage-gated phased go walkthrough (Option C).** Covers the three stage-gate decision framework, $20M initial commitment, gate pass criteria, real option value, and the separate **closure-liability deferral NPV of $508M** (at 7% discount). Cross-references the shared DCF chain from the Option A walkthrough. 658 lines. |
+| [`TASK_LIST.md`](TASK_LIST.md) | **Master task list** — 95 tasks across 8 workstreams, classified by readiness (✅ READY / 🟡 DRAFT-READY / 🔴 BLOCKED). Tracks the full pipeline from analysis through presentation. |
+| [`2026_Graduate_Challenge_Brief.pdf`](2026_Graduate_Challenge_Brief.pdf) | **Original challenge brief** — 18-page document (+ 8-page supplement by Shaun Booth) defining the scenario, the two tasks, deliverable format, and provided financial models. The source of truth for all requirements. |
+| [`verify_phase2.py`](verify_phase2.py) | **55-check verification suite** — programmatically verifies all Phase 2 deliverables (slide counts, NPV figures, file presence, content checks). All 55 checks pass. |
+
+### `slides/` — Presentation Deliverables
+
+| File | Purpose |
+|------|---------|
+| [`slides/deck.html`](slides/deck.html) | **Primary HTML presentation deck** — 20 slides with presenter mode, CSS charts, keyboard navigation, and presenter notes panel (press **N**). This is the main deck for live presentation. 1,446 lines. |
+| [`slides/Wallaby_Mining_Board_Presentation.pptx`](slides/Wallaby_Mining_Board_Presentation.pptx) | **PowerPoint deck** — 20 slides (126 KB) with native python-pptx charts (bar, waterfall, timeline). Editable in PowerPoint for manual adjustments. |
+| [`slides/presentation-annotated.html`](slides/presentation-annotated.html) | **Annotated HTML deck** — same 20 slides as the main deck, but with interactive tooltips. Hover any dotted-underlined value to see calculation details, source cell references, and explanatory notes. Use for self-review or sharing with reviewers who want to verify figures. 926 lines. |
+| [`slides/presentation.html`](slides/presentation.html) | **Simplified HTML deck** — earlier non-presenter version of the 20-slide deck. Simpler layout without presenter mode. Useful for quick viewing or embedding. 793 lines. |
+| [`slides/speaker_notes.md`](slides/speaker_notes.md) | **Speaker notes** — 900-second timed notes for all 14 content slides + 6 appendix slides. Per-slide key phrases, transitions, and timing markers. |
+| [`slides/_build_pptx.py`](slides/_build_pptx.py) | **PPTX build script** — generates the PowerPoint deck programmatically using python-pptx. Re-run to regenerate the PPTX from source data. |
+
+### `analysis/` — Analysis Documents & Scripts
+
+| File | Purpose |
+|------|---------|
+| [`analysis/01_workbook_audit.md`](analysis/01_workbook_audit.md) | **Full 15-sheet Complex Valuation Model audit.** Cell counts, formula counts, cross-sheet link verification. Key finding: Brave Blossom Capital tab was a blank template shell. Unit costs verified at $387.9M. 550 lines. |
+| [`analysis/01b_financial_model_analysis.md`](analysis/01b_financial_model_analysis.md) | **NPV/IRR scenario analysis** with populated capital schedule. Corrected NPV: $997M base case. Five scenarios ($859M–$1,072M), sensitivity analysis, DCF dashboard. 350 lines. |
+| [`analysis/02_brave_blossom_swot.md`](analysis/02_brave_blossom_swot.md) | **11-area SWOT for Brave Blossom** (Option A: Full Go). Valuation narrative, $389M capital review, 1:2.31 capital-to-liability ratio analysis. 344 lines. |
+| [`analysis/03_closure_liability_review.md`](analysis/03_closure_liability_review.md) | **$900M closure liability review.** All 8 anomalies documented, 6 SMART targets with compliance checks (total: $180.3M / 20% reduction), cashflow impact and implementation risk. 511 lines. |
+| [`analysis/04_other_projects_and_workplan.md`](analysis/04_other_projects_and_workplan.md) | **Other projects & forward workplan.** SWOT for Brumby (Option C), Bronco (Option D), and future exploration (Option E). Cross-option comparison matrix A–E. Stage-gated workplan 2027–2033. 787 lines. |
+| [`analysis/05_recommendation_gonogo.md`](analysis/05_recommendation_gonogo.md) | **Go/no-go recommendation.** Do-nothing scenario (Option B), top 3 recommendations with cashflow analysis and implementation risks, proposed timeline. 361 lines. |
+| [`analysis/06_slide_structure_outline.md`](analysis/06_slide_structure_outline.md) | **Slide structure outline** — 14 content slides + 6 appendix, 900-second timing budget, per-slide content and speaker notes guidance. 564 lines. |
+| [`analysis/07_qa_preparation.md`](analysis/07_qa_preparation.md) | **Q&A preparation** — 64 anticipated board questions across 8 categories, 10 model answers, 8 hostile question prep, solo presenter framework. 527 lines. |
+| [`analysis/08_plain_english_evaluation.md`](analysis/08_plain_english_evaluation.md) | **Plain-English evaluation of all 5 options (A–E)** — what each means, pros, cons, and why the team recommends what it recommends. No jargon, no spreadsheets. **Start here.** 434 lines. |
+| [`analysis/_audit_deep.py`](analysis/_audit_deep.py) | **Deep audit script** — dumps cell-level formulas and values for OC Clean Capital, Springbok, Brave Blossom, and Decommissioned Mine sheets. Used to generate the workbook audit report (01). |
+| [`analysis/_audit_raw.py`](analysis/_audit_raw.py) | **Raw audit script** — comprehensive dump of all 15 sheets: every cell with formulas, values, and structured JSON output. Most thorough audit script. |
+| [`analysis/_audit_structure.py`](analysis/_audit_structure.py) | **Structural audit script** — analyses sheet structure: dimensions, formula patterns, cross-sheet link mapping. Used to map the workbook architecture. |
+| [`analysis/_audit_targeted.py`](analysis/_audit_targeted.py) | **Targeted audit script** — extracts specific data: Safeguard baselines, NPV result cells, Summary tab, Assumptions tab. Used for final figure verification. |
+| [`analysis/_populate_capital.py`](analysis/_populate_capital.py) | **Capital schedule populator** — writes 12 capital items with unit costs and year-by-year fractional scheduling into the Brave Blossom Capital tab, producing the populated workbook. |
+| [`analysis/_compute_npv_scenarios.py`](analysis/_compute_npv_scenarios.py) | **NPV/IRR scenario calculator** — computes 5 NPV scenarios (original, with/without contingency, with/without tax shield) from the populated workbook. Produces the corrected $997M base case. |
+
+### `vault/` — Structured Knowledge Base (23 Files + Index)
+
+> The vault decomposes the 18-page brief + 8-page supplement into 23 structured topic files. Start with the index, then jump to the file for the topic you need.
+
+| File | Topic | Purpose |
+|------|-------|---------|
+| [`vault/INDEX.md`](vault/INDEX.md) | **Navigation index** | Links to all 23 vault files with one-line summaries. Use this to find the right vault file quickly. |
+| [`vault/01_Challenge_Overview.md`](vault/01_Challenge_Overview.md) | Challenge overview | What the challenge is, who you represent (WM management team), the two core tasks, and deliverable format. |
+| [`vault/02_Company_Profile.md`](vault/02_Company_Profile.md) | Company profile | Wallaby Mining, Waratah Resources JV structure, 60% acquisition terms, asset portfolio summary. |
+| [`vault/03_Springbok_Operations.md`](vault/03_Springbok_Operations.md) | Springbok operations | Current mine status, production, challenges, infrastructure (CHPP, TLO, rail/port), logistics, closure timeline (Q4 2031). |
+| [`vault/04_Brave_Blossom_Project.md`](vault/04_Brave_Blossom_Project.md) | Brave Blossom project | Conceptual underground mine — geology, seam details, mine design, ~6 Mtpa saleable HCC, ~20-year life, capital estimate. |
+| [`vault/05_Key_Considerations.md`](vault/05_Key_Considerations.md) | Key considerations | CHPP capacity & life, logistics (rail/port), carbon pricing, closure, social impact, neighbouring mines (Bronco). |
+| [`vault/06_Coal_Quality_Specs.md`](vault/06_Coal_Quality_Specs.md) | Coal quality specs | Detailed coal quality parameters table — ash, VM, CSN, sulfur, phosphorus, crucible swelling, etc. for Springbok premium HCC. |
+| [`vault/07_Capital_Estimate.md`](vault/07_Capital_Estimate.md) | Capital estimate | $389M concept capital estimate — 12 items broken down by year and category (development, equipment, infrastructure). Source for the populated capital schedule. |
+| [`vault/08_Task1_Strategic_Review.md`](vault/08_Task1_Strategic_Review.md) | Task 1: Strategic review | Life extension strategic assessment — options A–E, SWOT framework, 11 evaluation areas, go/no-go criteria. |
+| [`vault/09_Task2_Closure_Liability.md`](vault/09_Task2_Closure_Liability.md) | Task 2: Closure liability | Post-mining liability mitigation — $900M estimate, decommissioned mine emissions, SMART recommendation framework. |
+| [`vault/10_Deliverables_Format.md`](vault/10_Deliverables_Format.md) | Deliverables format | Presentation requirements — 15+5 min format, four required sections, SWOT/SMART criteria, professional/creative standard. |
+| [`vault/11_Outstanding_Information.md`](vault/11_Outstanding_Information.md) | Outstanding information | What's missing from the brief — gaps between what's provided and what's needed to fully complete the challenge (conceptual mining study, seam contours, depth of cover). |
+| [`vault/12_Proposed_Solutions.md`](vault/12_Proposed_Solutions.md) | Proposed solutions | Strategic options matrix — Options A–E with capital, revenue extension, closure impact, and risk level comparison. |
+| [`vault/13_SWOT_Framework.md`](vault/13_SWOT_Framework.md) | SWOT framework | Standardised SWOT structure for evaluating each option across the 11 areas specified in the brief. |
+| [`vault/14_Deliverables_Checklist.md`](vault/14_Deliverables_Checklist.md) | Deliverables checklist | Master checklist consolidating all required presentation elements from both the 18-page brief and 8-page supplement. |
+| [`vault/15_Brumby_Open_Cut.md`](vault/15_Brumby_Open_Cut.md) | Brumby open cut | Brumby open cut development project — Xanadu seam target, 1.5 Mtpa, 25 km NE. Reconciles dual status (historic mine + development project). |
+| [`vault/16_Supplement_Notes.md`](vault/16_Supplement_Notes.md) | Supplement notes | 8-page supplemental PDF analysis — new details, corrections, and reconciliations relative to the 18-page brief. |
+| [`vault/17_2024_Planned_Closure_Costs.md`](vault/17_2024_Planned_Closure_Costs.md) | Closure cost workbook | Full breakdown of the $900M ERC closure cost workbook — 6 sheets, 9 domains, 284 line items, holding costs, rate library, cost reduction opportunities. |
+| [`vault/18_Audit_Results.md`](vault/18_Audit_Results.md) | Audit results | Calculation audit of all 284 closure cost line items — domain subtotals, grand total ($900M), contingency math, holding costs verified. **0 arithmetic errors.** |
+| [`vault/19_Issues_and_Anomalies.md`](vault/19_Issues_and_Anomalies.md) | Issues & anomalies | 8 issues found during audit — duplicate TSF ($40M+), duplicate 4I/4J ($4.8M), missing execution-phase detail, outdated rate escalations, fleet rate substitution. |
+| [`vault/20_Vault_Crossrefs_and_SMART.md`](vault/20_Vault_Crossrefs_and_SMART.md) | Cross-refs & SMART targets | Cross-references to vault files 05/07/08/09/12/13/14/15/16 + 6 quantified SMART cost-reduction targets (~$180M, 20%) + NPV of Brave Blossom deferral ($508M). |
+| [`vault/21_Complex_Valuation_Model.md`](vault/21_Complex_Valuation_Model.md) | Valuation model analysis | Full analysis of the Complex Valuation Model workbook — 16 sheets, 3 mining scenarios (Springbok $279M, Brave Blossom $1,320M, combined $1,670M), carbon pricing, decommissioned mine CH₄ emissions. |
+| [`vault/22_Requirements_and_Deliverables_Outline.md`](vault/22_Requirements_and_Deliverables_Outline.md) | Master reference | Consolidated requirements & deliverables from all 21 vault files — scenario, tasks, presentation structure, SWOT areas, SMART targets, financial models, key numbers, gaps, timeline, cross-ref map. |
+| [`vault/23_Phase1_Outputs.md`](vault/23_Phase1_Outputs.md) | Phase 1 handoff | Phase 1 outputs summary — 8 analysis docs, corrected NPV figures ($997M/$1,277M), Phase 2 task list, verification status. Handoff document for Phase 2. |
+
+### `workbooks/` — Excel Financial Models
+
+| File | Purpose |
+|------|---------|
+| [`workbooks/Complex_Valuation_Model.xlsx`](workbooks/Complex_Valuation_Model.xlsx) | **Original DCF valuation model** — 15 sheets as provided by challenge organisers. Contains the blank Brave Blossom Capital tab that produced the $0 capital / $1,320M NPV error. |
+| [`workbooks/Complex_Valuation_Model_POPULATED.xlsx`](workbooks/Complex_Valuation_Model_POPULATED.xlsx) | **Populated DCF model** — Brave Blossom Capital tab completed with 12 items and year-by-year scheduling. Produces the corrected $997M NPV. Use this for all analysis. ⚠️ No cached formula values — use `_compute_npv_scenarios.py` for computed results. |
+| [`workbooks/2024_Springbok_Planned_Closure_Costs.xlsx`](workbooks/2024_Springbok_Planned_Closure_Costs.xlsx) | **$900M ERC closure cost model** — 6 sheets, 9 rehabilitation domains, 284 line items, 296 unit rates. The third-party closure estimate that the SMART targets challenge. |
 
 ---
 
