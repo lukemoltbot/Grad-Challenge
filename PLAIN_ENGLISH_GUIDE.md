@@ -39,10 +39,31 @@ This project looked at what WM should do next. Should they open a new mine? Shou
 |---|-----------|-------------------|-----|
 | 1 | Remove a duplicate cost for the Tailings Storage Facility (the dam that holds mining waste) | $39.5–43.8M | The same cost was counted twice in the spreadsheet |
 | 2 | Reduce the "just in case" money (contingency) from 35% to 25% | $49.4M | 35% is higher than the industry standard of 25% |
-| 3 | Sell the 505 company houses instead of demolishing them | $11.8M | Selling generates money; demolishing costs money |
+| 3 | Sell the 505 company houses instead of demolishing them | $11.8M | Selling generates money; demolishing costs money (detailed explanation below) |
 | 4 | Speed up land rehabilitation during mining (from $2.5M/year to $5M/year) | $11.2M | Doing it gradually during operations is cheaper than all at once at the end |
 | 5 | Gradually hand back mining leases as areas are rehabilitated | ~$50M | Once land is restored, you no longer pay holding costs on it |
 | 6 | Capture and sell methane gas from the closed mine instead of letting it vent | $14.1M (turns a cost into income) | Methane is valuable; it can be sold instead of wasted |
+
+#### Where Are the 505 Houses, Why Are They Being Demolished, and Can They Be Sold Instead?
+
+**Where are they?** The 505 houses are in **Dustyroo Flats**, the company town built by Wallaby Mining to house the Springbok Coal Complex workforce. Dustyroo Flats is located roughly 80km northwest of Emerald in Queensland's Bowen Basin. The town's economy is nearly entirely dependent on the mine. The Barada People hold registered native title over the broader land area. In the closure workbook, these houses fall under **Domain 9K — "Camp Infrastructure (town)"**, which is actually the largest sub-domain in all of Surface Infrastructure at $18.2M total. Beyond the 505 houses, Domain 9K also includes 86 demountables, moderate buildings (school, shops — 26,502 m²), bitumen removal (143,652 m²), asbestos removal, substation and powerline removal, and — interestingly — a "house sale management" line item that already exists in the workbook.
+
+**Why are they planned for demolition?** The 2024 ERC closure workbook assumes default demolition as the standard approach — line item 1.047: ~505 dwellings at $23,200 each = **$11.8M**. The reasoning is straightforward mining-industry convention: (1) the houses were built by the mining company for its workforce, so when the mine closes, the economic rationale for the town disappears; (2) standard QLD mining closure plans historically assumed town infrastructure would be demolished and the land rehabilitated as part of returning the mining lease to its pre-disturbance state; and (3) the closure target is lease relinquishment by 2050, and the ERC framework assumes all surface infrastructure on the mining lease must be removed to achieve relinquishment. But here's the key point: **demolition is a planning assumption, not a regulatory requirement.** Nothing in the ERC framework or Queensland legislation requires the houses to be demolished.
+
+**Is selling them actually feasible?** Yes — selling is feasible, and it's one of the 6 committed SMART targets (SMART-3) in the closure liability analysis:
+
+- **Queensland precedent exists.** Mining towns like Moura and Moranbah have successfully transitioned company housing to private ownership. This isn't a novel concept.
+- **The houses are structurally sound.** They were built to house a mining workforce, meaning they're solid construction, not temporary dwellings.
+- **The workbook already has a "house sale management" line item** in Domain 9K — meaning WM has already contemplated this possibility at some level.
+- **Social licence.** A competing mine company faced media backlash for town abandonment. Selling houses to residents supports a managed community transition rather than abandonment, which is far better for WM's reputation.
+
+**What selling would save:** $11.8M in demolition costs (505 × $23,200), plus flow-on reductions in bitumen removal and asbestos removal costs within Domain 9K's $18.2M total, plus potential sale revenue at nominal prices (not yet quantified in the analysis).
+
+**Risks and requirements (rated MEDIUM risk):** Community consultation is needed — residents need to want to stay/buy, and without an alternative economic base, some may not want to remain. Local government coordination is required — the town would need to transition from company-owned to privately-owned/council-managed infrastructure (water, power, roads, sewage). Planning approvals are needed for the town to continue as a residential area outside the mining lease framework. Some houses may need refurbishment before sale. And the Barada People hold registered native title over the land, so any land use transition requires engagement with them.
+
+**The bigger picture:** This is also tied to the Brave Blossom decision. If Brave Blossom proceeds (extending mine life to ~2052), the town stays active for another 20+ years, and the housing question is deferred. If it doesn't proceed, the house sale program becomes a critical part of the community transition strategy — avoiding a "ghost town" scenario where Dustyroo Flats is demolished and 505 families are displaced. The analysis recommends implementing the house sale program from 2027–2029, before closure execution begins in Q4 2031, giving a 2–3 year window to transition ownership while the mine is still operational and the community is stable.
+
+**Bottom line:** Selling is feasible, has precedent in QLD, saves at least $11.8M, and is the socially responsible alternative to demolition. The houses are not required to be demolished — that's just the default assumption in the ERC workbook. The main challenge is ensuring Dustyroo Flats has some economic basis beyond the mine, which is why the analysis links this to broader community transition planning (renewables, agriculture, tourism on rehabilitated land).
 
 **Total savings**: About $162–166 million, roughly an 18% reduction. The target is 20% ($180 million) to allow room for the remaining measures.
 
