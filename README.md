@@ -6,6 +6,16 @@
 
 ---
 
+## 🎯 Presentation Deliverables — Quick Links
+
+| Deliverable | Link | Notes |
+|-------------|------|-------|
+| **HTML Deck** (20 slides, presenter mode) | [slides/deck.html](slides/deck.html) | Open in browser — keyboard navigation, press **N** for presenter notes |
+| **PowerPoint** (20 slides, 126 KB) | [slides/Wallaby_Mining_Board_Presentation.pptx](slides/Wallaby_Mining_Board_Presentation.pptx) | Native python-pptx charts, editable in PowerPoint |
+| Speaker Notes (900s timed) | [slides/speaker_notes.md](slides/speaker_notes.md) | Per-slide notes with key phrases and timing |
+
+---
+
 ## Table of Contents
 
 1. [Start Here — Reading Guide](#start-here--reading-guide)
