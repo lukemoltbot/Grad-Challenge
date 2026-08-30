@@ -18,6 +18,7 @@
 8. [Key Financial Figures](#key-financial-figures)
 9. [Deliverables Mapping](#deliverables-mapping)
 10. [Status](#status)
+11. [Calculation Walkthroughs](#calculation-walkthroughs)
 
 ---
 
@@ -33,7 +34,15 @@
 
    Read this second. This builds on the evaluation above and walks through *how* the conclusions were reached — the three big recommendations, how the financial numbers were calculated (NPV, IRR, capital), what the risks are, and what happens to the workers and the town. Includes a plain-English glossary of every acronym used in the project.
 
-After these two guides, the rest of this README and the `/analysis/` folder provide the full technical detail behind every figure and recommendation.
+3. [`OPTION_A_CALCULATION_WALKTHROUGH.md`](OPTION_A_CALCULATION_WALKTHROUGH.md) — **Option A Calculation Walkthrough: Brave Blossom Underground Mine**
+
+   Read this third. A cell-by-cell walkthrough of the entire Brave Blossom DCF model. Explains every financial term (discount rate, NPV, IRR, tax shield, carbon liability), references exact workbook cells (`Brave Blossom !D7`, `Assumptions!B2`), and shows how revenue, costs, capital, and cashflow combine to produce the corrected $997M NPV. Open the Excel workbook alongside this document and follow the live formulas.
+
+4. [`OPTION_C_CALCULATION_WALKTHROUGH.md`](OPTION_C_CALCULATION_WALKTHROUGH.md) — **Option C Calculation Walkthrough: Phased Go — Stage-Gated Brave Blossom**
+
+   Read this fourth. Covers what's unique to Option C: the three stage-gate decision framework overlaid on the same DCF model, the $20M initial commitment, gate pass criteria, real option value, and the separate closure-liability deferral NPV ($508M at 7% discount). Cross-references the shared DCF chain from the Option A walkthrough rather than repeating it.
+
+After these four guides, the rest of this README and the `/analysis/` folder provide the full technical detail behind every figure and recommendation.
 
 ---
 
@@ -73,6 +82,8 @@ Grad-Challenge/
 ├── TASK_LIST.md                             # Master task list (95 tasks across 8 workstreams)
 ├── README.md                                # This file
 ├── PLAIN_ENGLISH_GUIDE.md                   # Plain English Guide: How We Reached Our Conclusions
+├── OPTION_A_CALCULATION_WALKTHROUGH.md       # Cell-by-cell DCF walkthrough (Brave Blossom, $997M NPV)
+├── OPTION_C_CALCULATION_WALKTHROUGH.md       # Stage-gated phased go walkthrough (gates, deferral NPV)
 ├── vault/                                   # 23-file knowledge base (INDEX + 01–23)
 │   ├── INDEX.md
 │   ├── 01_Challenge_Overview.md
@@ -113,7 +124,16 @@ Grad-Challenge/
 | File | Description |
 |------|-------------|
 | [`analysis/08_plain_english_evaluation.md`](analysis/08_plain_english_evaluation.md) | **Plain-English Evaluation & Recommendations** — Start here. Explains each of the five options (A–E) in plain English: what it is, what's good, what's bad, and why. No jargon, no spreadsheets. |
-| [`PLAIN_ENGLISH_GUIDE.md`](PLAIN_ENGLISH_GUIDE.md) | **Plain English Guide: How We Reached Our Conclusions** — Read second. Walks through how the recommendations were reached, how the financial numbers were calculated, what the risks are, and what happens to workers and the town. Includes a plain-English glossary of all acronyms. |
+|| [`PLAIN_ENGLISH_GUIDE.md`](PLAIN_ENGLISH_GUIDE.md) | **Plain English Guide: How We Reached Our Conclusions** — Read second. Walks through how the recommendations were reached, how the financial numbers were calculated, what the risks are, and what happens to workers and the town. Includes a plain-English glossary of all acronyms. |
+
+### Calculation Walkthroughs
+
+These documents walk through the financial calculations cell-by-cell, referencing exact workbook cells so readers can follow the live Excel formulas. They are the most technically detailed guides in the project — read them after the plain-English guides above, with the workbook open alongside.
+
+|| File | Description |
+|------|-------------|
+|| [`OPTION_A_CALCULATION_WALKTHROUGH.md`](OPTION_A_CALCULATION_WALKTHROUGH.md) | **Option A: Brave Blossom Underground Mine** — Full DCF walkthrough. Explains discount rate, NPV, IRR, tax shield, revenue/cost/capital chains, carbon liability, and how they combine to produce the corrected **$997M NPV** (~52% IRR). 826 lines with exact cell references to `Brave Blossom`, `Assumptions`, `Brave Blossom Capital`, `Carbon`, `Decommissioned Mine`, and `Analysis` sheets. |
+|| [`OPTION_C_CALCULATION_WALKTHROUGH.md`](OPTION_C_CALCULATION_WALKTHROUGH.md) | **Option C: Phased Go — Stage-Gated Brave Blossom** — Focuses on what's unique to Option C: three stage gates (end 2028, end 2030, 2032/33), $20M initial PFS commitment, gate pass criteria, real option value, and the **closure-liability deferral NPV of $508M** (at 7% discount). Cross-references the shared DCF chain from Option A. 658 lines. |
 
 ### Brief & Planning
 
@@ -347,8 +367,10 @@ How each deliverable from the brief maps to files in this repository:
 | **15-min presentation deck** | [`slides/Wallaby_Mining_Board_Presentation.pptx`](slides/Wallaby_Mining_Board_Presentation.pptx), [`slides/deck.html`](slides/deck.html) |
 | **Speaker notes** | [`slides/speaker_notes.md`](slides/speaker_notes.md) |
 | **Q&A preparation** | [`analysis/07_qa_preparation.md`](analysis/07_qa_preparation.md) |
-| **SWOT (11 areas per option)** | [`analysis/02_brave_blossom_swot.md`](analysis/02_brave_blossom_swot.md) (Brave Blossom), [`analysis/04_other_projects_and_workplan.md`](analysis/04_other_projects_and_workplan.md) (Brumby/Bronco/Option E) |
-| **SMART recommendations** | [`analysis/03_closure_liability_review.md`](analysis/03_closure_liability_review.md) — 6 targets, $180.3M total |
+|| **SWOT (11 areas per option)** | [`analysis/02_brave_blossom_swot.md`](analysis/02_brave_blossom_swot.md) (Brave Blossom), [`analysis/04_other_projects_and_workplan.md`](analysis/04_other_projects_and_workplan.md) (Brumby/Bronco/Option E) |
+|| **SMART recommendations** | [`analysis/03_closure_liability_review.md`](analysis/03_closure_liability_review.md) — 6 targets, $180.3M total |
+|| **Option A calculation walkthrough** | [`OPTION_A_CALCULATION_WALKTHROUGH.md`](OPTION_A_CALCULATION_WALKTHROUGH.md) — cell-by-cell DCF walkthrough ($997M NPV) |
+|| **Option C calculation walkthrough** | [`OPTION_C_CALCULATION_WALKTHROUGH.md`](OPTION_C_CALCULATION_WALKTHROUGH.md) — stage-gate framework + deferral NPV ($508M) |
 
 ---
 
@@ -372,4 +394,40 @@ These are noted as limitations in the presentation and do not affect the core an
 
 ---
 
-*Last updated: 2026-08-29*
+## Calculation Walkthroughs
+
+The project includes two detailed calculation walkthroughs that trace every financial figure back to specific Excel cells. These are the most technically detailed documents in the repository — designed for readers who want to verify the math themselves by opening the workbook alongside the guide.
+
+### Option A — Brave Blossom Underground Mine
+
+**File**: [`OPTION_A_CALCULATION_WALKTHROUGH.md`](OPTION_A_CALCULATION_WALKTHROUGH.md) (826 lines)
+
+A complete cell-by-cell walkthrough of the Brave Blossom DCF model. It covers:
+
+- **Financial terms explained**: discount rate (8%), NPV, IRR, tax shield, carbon liability — each with plain-English definitions and the workbook cell where it's defined
+- **Revenue chain**: production volume → saleable coal → pricing (PHCC benchmark $240/t, 88% realisation) → FX conversion → gross revenue, with exact cell references across the `Brave Blossom` sheet (columns D through BO, years 2027–2052)
+- **Cost chain**: operating costs, royalties (tiered), CPI escalation, carbon costs (two scenarios from the `Carbon` sheet)
+- **Capital schedule**: 12 items from the `Brave Blossom Capital` sheet — unit costs, fractional unit counts, year-by-year phasing, 30% contingency, tax shield computation
+- **Cashflow & NPV**: how net cashflow is built line by line, discounted at 8%, summed to the corrected **$997M base-case NPV** and **~52% IRR**
+- **Sensitivity scenarios**: 5 scenarios ($859M–$1,072M), all NPV-positive
+
+**How to use it**: Open `Complex_Valuation_Model_POPULATED.xlsx` in Excel. Each section of the walkthrough references specific sheets and cells (e.g., `Brave Blossom !D7`, `Assumptions!B2`, `Brave Blossom Capital!D57`). Navigate to the referenced cell to see the live formula and verify the calculation.
+
+### Option C — Phased Go: Stage-Gated Brave Blossom
+
+**File**: [`OPTION_C_CALCULATION_WALKTHROUGH.md`](OPTION_C_CALCULATION_WALKTHROUGH.md) (658 lines)
+
+Covers what's **unique to Option C** — the stage-gated decision framework overlaid on the same DCF model as Option A. It does not repeat the shared DCF chain; instead it cross-references the Option A walkthrough. It covers:
+
+- **Stage gates explained**: three gates (Gate 1: end 2028, Gate 2: end 2030, Gate 3: 2032/33) — what each gate reviews and the pass criteria
+- **$20M initial commitment**: PFS and exploration drilling, funded upfront before Gate 1
+- **Capital phasing**: how the 12 capital items in `Brave Blossom Capital` map to the three stages — which costs are deferred vs committed at each gate
+- **Real option value**: the value of optionality — the right to stop at each gate without committing the full $389M–$674M
+- **Closure-liability deferral NPV**: a separate $508M benefit (at 7% discount) from deferring the $900M closure liability by developing Brave Blossom instead of closing Springbok in 2032. This is quantified independently of the project NPV.
+- **Decision tree**: the three-gate decision tree with branch probabilities and expected values
+
+**How to use it**: Read the Option A walkthrough first (or have it open for reference). Option C's walkthrough assumes familiarity with the DCF chain and focuses on the incremental analysis: gate criteria, capital phasing differences, and the deferral NPV calculation.
+
+---
+
+*Last updated: 2026-08-30*
